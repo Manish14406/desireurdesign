@@ -740,6 +740,56 @@
 }
 
 /* ─────────────────────────────────────────────────────────────
+   SERVICE CARD — premium interactive system
+───────────────────────────────────────────────────────────── */
+
+/* Card base & lift effect */
+.service-card {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 350ms cubic-bezier(0.34, 1.20, 0.64, 1),
+    box-shadow 350ms ease,
+    border-color 350ms ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 16px 48px rgba(200, 169, 106, 0.20),
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(200, 169, 106, 0.45) !important;
+}
+
+/* Image zoom */
+.service-card-img {
+  transition: transform 400ms ease;
+}
+.service-card:hover .service-card-img {
+  transform: scale(1.07);
+}
+
+/* Animated "View Gallery →" CTA */
+.service-cta {
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    color 300ms ease;
+}
+.service-card:hover .service-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Arrow nudge on hover */
+.service-cta-arrow {
+  transition: transform 300ms ease;
+}
+.service-card:hover .service-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ─────────────────────────────────────────────────────────────
    MOBILE-FIRST RESPONSIVE OVERRIDES
 ───────────────────────────────────────────────────────────── */
 
@@ -794,3 +844,106 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   GALLERY MODAL — entrance + image loading animations
+───────────────────────────────────────────────────────────── */
+
+/* Backdrop fade-in */
+@keyframes modalBackdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.modal-backdrop {
+  animation: modalBackdropIn 250ms ease forwards;
+}
+
+/* Panel slide-up */
+@keyframes modalPanelIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+.modal-panel {
+  animation: modalPanelIn 320ms cubic-bezier(0.34, 1.20, 0.64, 1) forwards;
+}
+
+/* Dark shimmer skeleton while image loads */
+@keyframes modalImgShimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.modal-img-shimmer {
+  background: linear-gradient(
+    110deg,
+    #1a1a1a 30%,
+    #2a2a2a 45%,
+    #333333 50%,
+    #2a2a2a 55%,
+    #1a1a1a 70%
+  );
+  background-size: 200% 100%;
+  animation: modalImgShimmer 1.4s ease-in-out infinite;
+}
+
+/* Gold spinning ring loader */
+@keyframes modalSpin {
+  to { transform: rotate(360deg); }
+}
+.modal-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(200, 169, 106, 0.20);
+  border-top-color: #C8A96A;
+  animation: modalSpin 0.7s linear infinite;
+}
+
+/* Image fade-in once loaded */
+@keyframes modalImgFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.modal-img {
+  transition: opacity 350ms ease;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PREMIUM PROCESS ICONS — float + gold ring pulse
+───────────────────────────────────────────────────────────── */
+
+/* Subtle floating bob on the badge */
+@keyframes processIconFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+
+/* Gold outer ring pulse */
+@keyframes processRingPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0   rgba(200, 169, 106, 0.0),
+      0 4px 16px rgba(200, 169, 106, 0.20);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(200, 169, 106, 0.12),
+      0 4px 24px rgba(200, 169, 106, 0.35);
+  }
+}
+
+/* Apply float + ring-pulse when parent card is hovered */
+.group:hover .process-icon-badge {
+  animation:
+    processIconFloat  2s ease-in-out infinite,
+    processRingPulse  2s ease-in-out infinite;
+}
+
+/* Also subtly rotate the svg icon itself on hover */
+@keyframes processIconSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(15deg); }
+}
+.group:hover .process-icon-badge svg {
+  animation: processIconSpin 300ms ease forwards;
+}
+

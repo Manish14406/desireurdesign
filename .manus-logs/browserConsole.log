@@ -1144,3 +1144,85 @@
 [2026-07-20T09:49:28.774Z] {"timestamp":1784540964997,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-07-20T09:49:29.049Z] {"timestamp":1784540968790,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-07-20T09:49:31.003Z] {"timestamp":1784540970429,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:06:36.236Z] {"timestamp":1784545590602,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:06:36.236Z] {"timestamp":1784545590636,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:06:41.230Z] {"timestamp":1784545600570,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:09:14.878Z] {"timestamp":1784545753327,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:09:14.878Z] {"timestamp":1784545753328,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:09:14.878Z] {"timestamp":1784545753666,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:09:14.878Z] {"timestamp":1784545753667,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:09:58.152Z] {"timestamp":1784545796144,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:09:58.152Z] {"timestamp":1784545796182,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:09:58.152Z] {"timestamp":1784545796223,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:12:37.325Z] {"timestamp":1784545940910,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:12:37.325Z] {"timestamp":1784545940911,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:12:46.887Z] {"timestamp":1784545959555,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-07-20T11:12:56.197Z] {"timestamp":1784545971202,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:12:56.197Z] {"timestamp":1784545971216,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:13:03.210Z] {"timestamp":1784545981297,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:13:46.408Z] {"timestamp":1784546024388,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:13:46.408Z] {"timestamp":1784546024404,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:13:46.408Z] {"timestamp":1784546024484,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:17:34.399Z] {"timestamp":1784546252900,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:17:34.399Z] {"timestamp":1784546252901,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:17:34.399Z] {"timestamp":1784546253074,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:17:34.399Z] {"timestamp":1784546253074,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:17:40.885Z] {"timestamp":1784546253084,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:17:40.885Z] {"timestamp":1784546253085,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:17:40.885Z] {"timestamp":1784546253431,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:17:40.885Z] {"timestamp":1784546253432,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-20T11:18:00.880Z] {"timestamp":1784546280163,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:18:31.029Z] {"timestamp":1784546310316,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:18:31.030Z] {"timestamp":1784546310316,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:18:31.030Z] {"timestamp":1784546310729,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:18:31.030Z] {"timestamp":1784546310730,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:18:40.881Z] {"timestamp":1784546280131,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:18:40.881Z] {"timestamp":1784546310514,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:18:40.881Z] {"timestamp":1784546310514,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:18:40.881Z] {"timestamp":1784546310949,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:18:40.881Z] {"timestamp":1784546310950,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:19:37.850Z] {"timestamp":1784546373111,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:19:37.850Z] {"timestamp":1784546373129,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:19:41.458Z] {"timestamp":1784546362287,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-07-20T11:19:41.471Z] {"timestamp":1784546362287,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-07-20T11:19:43.841Z] {"timestamp":1784546383062,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:21:33.122Z] {"timestamp":1784546491831,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-07-20T11:21:33.122Z] {"timestamp":1784546491831,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:21:54.314Z] {"timestamp":1784546512307,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:21:54.314Z] {"timestamp":1784546512318,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:21:54.314Z] {"timestamp":1784546512379,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:24:11.341Z] {"timestamp":1784546650281,"level":"DEBUG","args":["[vite]","invalidate /src/contexts/CalculatorContext.tsx: Could not Fast Refresh (\"PACKAGE_DESC\" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports"],"stack":null}
+[2026-07-20T11:24:11.341Z] {"timestamp":1784546650283,"level":"DEBUG","args":["[vite]","hot updated: /src/contexts/CalculatorContext.tsx"],"stack":null}
+[2026-07-20T11:24:11.341Z] {"timestamp":1784546650284,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:24:12.945Z] {"timestamp":1784546651638,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-07-20T11:24:12.945Z] {"timestamp":1784546651639,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StyleQuiz.tsx"],"stack":null}
+[2026-07-20T11:24:12.945Z] {"timestamp":1784546651640,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AppointmentBooking.tsx"],"stack":null}
+[2026-07-20T11:24:12.945Z] {"timestamp":1784546651640,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:27:40.881Z] {"timestamp":1784546810164,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:27:40.881Z] {"timestamp":1784546810164,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:27:47.519Z] {"timestamp":1784546865508,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:27:47.519Z] {"timestamp":1784546865533,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:27:47.519Z] {"timestamp":1784546865653,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547045585,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547045588,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547091977,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547091978,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547092302,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547092303,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547100455,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:31:40.880Z] {"timestamp":1784547100456,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:32:40.908Z] {"timestamp":1784547110059,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:32:40.908Z] {"timestamp":1784547110059,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:32:40.908Z] {"timestamp":1784547134800,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:32:40.909Z] {"timestamp":1784547134806,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:32:40.909Z] {"timestamp":1784547135518,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-20T11:32:40.909Z] {"timestamp":1784547135518,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-20T11:32:57.136Z] {"timestamp":1784547174402,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:32:57.136Z] {"timestamp":1784547174423,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:32:57.136Z] {"timestamp":1784547174472,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:32:57.917Z] {"timestamp":1784547175904,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:32:57.917Z] {"timestamp":1784547175916,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:32:57.917Z] {"timestamp":1784547175983,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-20T11:40:12.887Z] {"timestamp":1784547610575,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-20T11:40:12.887Z] {"timestamp":1784547610597,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-20T11:40:12.887Z] {"timestamp":1784547610696,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}

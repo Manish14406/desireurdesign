@@ -12,6 +12,7 @@ import React, {
 
 export type PropertyType = "apartment" | "villa" | "penthouse" | "commercial";
 export type BHK = "1" | "2" | "3" | "4+";
+export type CommercialConfig = "office" | "retail" | "restaurant" | "other";
 export type Package = "essential" | "premium" | "luxury";
 
 export interface CalculatorSnapshot {

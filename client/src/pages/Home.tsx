@@ -105,12 +105,46 @@ export default function Home() {
       <section className="py-10 sm:py-14 px-4 sm:px-6 md:px-12 bg-white border-t border-[#E9E3D8] border-b border-[#E9E3D8]">
         <div className="max-w-[80rem] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x md:divide-[#E9E3D8]">
           {[
-            { v: "200+", l: "Completed Projects" },
-            { v: "6+", l: "Years Experience" },
-            { v: "3-Year", l: "Workmanship Warranty" },
-            { v: "100%", l: "Client Satisfaction" },
+            {
+              v: "200+", l: "Homes Delivered",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 mx-auto mb-3">
+                  <path d="M4 14L16 4l12 10v14H20v-8h-8v8H4V14z" />
+                  <path d="M12 28v-8h8v8" />
+                </svg>
+              ),
+            },
+            {
+              v: "6+", l: "Years of Experience",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 mx-auto mb-3">
+                  <polygon points="16,3 19.9,11.8 29.5,12.9 22.7,19.5 24.8,29 16,24.3 7.2,29 9.3,19.5 2.5,12.9 12.1,11.8" />
+                </svg>
+              ),
+            },
+            {
+              v: "3-Year", l: "Workmanship Warranty",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 mx-auto mb-3">
+                  <path d="M16 3L5 8v8c0 6.6 4.7 12.8 11 14 6.3-1.2 11-7.4 11-14V8L16 3z" />
+                  <polyline points="11,16 14.5,19.5 21,13" />
+                </svg>
+              ),
+            },
+            {
+              v: "99.9%", l: "Client Satisfaction",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" stroke="#C8A96A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 mx-auto mb-3">
+                  <circle cx="16" cy="11" r="5" />
+                  <path d="M16 18c-6 0-10 3-10 5v1h20v-1c0-2-4-5-10-5z" />
+                  <path d="M21 11.5c1-1 2.5-.5 3 1s0 3-1.5 3.5" />
+                  <path d="M20 19.5c2.5.5 5 2 5.5 3.5" />
+                </svg>
+              ),
+            },
           ].map((stat, i) => (
             <div key={i} className="text-center px-4">
+              {stat.icon}
               <p className="text-3xl sm:text-4xl md:text-5xl font-black text-[#C8A96A] mb-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{stat.v}</p>
               <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#2B2B2B]">{stat.l}</p>
             </div>
@@ -174,18 +208,81 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 sm:gap-y-16">
             {[
-              { title: "Consultation", desc: "Understanding your vision, lifestyle, and Vastu preferences." },
-              { title: "Concept Design", desc: "Initial layouts, mood boards, and aesthetic direction." },
-              { title: "Space Planning", desc: "Optimizing flow and function for every room." },
-              { title: "3D Visualization", desc: "Photorealistic renders of your future home." },
-              { title: "Material Selection", desc: "Curating premium finishes, fabrics, and hardware." },
-              { title: "Execution", desc: "Precision crafting by our expert installation teams." },
-              { title: "Quality Inspection", desc: "Rigorous checks against our luxury standards." },
-              { title: "Final Handover", desc: "Welcome to your beautifully finished new home." },
+              {
+                title: "Consultation", desc: "Understanding your vision, lifestyle, and Vastu preferences.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    <path d="M8 10h8M8 13h5" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Concept Design", desc: "Initial layouts, mood boards, and aesthetic direction.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.6-1.4 4.9-3.5 6.2L15 18H9l-.5-2.8A7 7 0 0 1 12 2z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Space Planning", desc: "Optimizing flow and function for every room.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" />
+                  </svg>
+                ),
+              },
+              {
+                title: "3D Visualization", desc: "Photorealistic renders of your future home.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <rect x="2" y="4" width="20" height="14" rx="2" />
+                    <path d="M8 20h8M12 18v2" />
+                    <path d="M9 8l3 4 3-4" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Material Selection", desc: "Curating premium finishes, fabrics, and hardware.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <polygon points="12,2 15.5,8.5 22,9.3 17,14.1 18.2,21 12,17.8 5.8,21 7,14.1 2,9.3 8.5,8.5" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Execution", desc: "Precision crafting by our expert installation teams.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Quality Inspection", desc: "Rigorous checks against our luxury standards.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <path d="M12 2L4 6v6c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V6l-8-4z" />
+                    <polyline points="8,12 11,15 16,10" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Final Handover", desc: "Welcome to your beautifully finished new home.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                ),
+              },
             ].map((step, i) => (
               <div key={i} className="relative p-6 rounded-3xl bg-[#F8F5F0] border border-[#E9E3D8] hover:border-[#C8A96A]/40 transition-colors group">
-                <div className="absolute -top-6 -left-4 w-12 h-12 bg-white rounded-full border-2 border-[#C8A96A] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="text-[#C8A96A] font-black text-lg" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{i + 1}</span>
+                <div className="process-icon-badge absolute -top-6 -left-4 w-12 h-12 bg-white rounded-full border-2 border-[#C8A96A] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#C8A96A] transition-all duration-300">
+                  <span className="text-[#C8A96A] group-hover:text-white transition-colors duration-300">
+                    {step.icon}
+                  </span>
                 </div>
                 <h3 className="text-sm font-black uppercase tracking-widest text-[#2B2B2B] mt-4 mb-3">{step.title}</h3>
                 <p className="text-[#666] text-sm font-light leading-relaxed">{step.desc}</p>
