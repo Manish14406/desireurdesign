@@ -50,10 +50,15 @@ export default function TestimonialsSection() {
           <div className="cinema-accent-line" />
 
           {/* Google badge */}
-          <div className="mt-6 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-[#E9E3D8] bg-[#F8F5F0] shadow-sm">
+          <a
+            href="https://www.google.com/search?rlz=1C1VDKB_enIN1143IN1143&sca_esv=5999353cb99206ac&sxsrf=APpeQnsZmaH83nF0h1fVXJOs-Fxst1sInA:1784536788319&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_zy9v7WyQLZdmQhDXKGqntMpAdtVsgvUIKXAYUxTU8_FLUM5Xo0N9MrbVbDUstTU8HqYrLPM2lSLlitMnNe4DBwpRb7bCsIe0X6kSl5DB6tM5U4oTw%3D%3D&q=Design+Ur+Desire+Reviews&sa=X&ved=2ahUKEwiauOzK7eCVAxWYzDgGHXAOD9YQ0bkNegQIKhAF&biw=1280&bih=607&dpr=1.5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-[#E9E3D8] bg-[#F8F5F0] shadow-sm hover:border-[#C8A96A]/50 transition-colors"
+          >
             <span className="text-xs font-bold text-[#2B2B2B]">★★★★★</span>
             <span className="text-[10px] uppercase tracking-widest text-[#666] font-semibold">4.9 / 5 on Google Reviews</span>
-          </div>
+          </a>
         </div>
 
         {/* Testimonial cards */}
@@ -117,7 +122,7 @@ export default function TestimonialsSection() {
         {/* Google Reviews CTA */}
         <div className="mt-10 sm:mt-12 text-center">
           <a
-            href="https://g.co/kgs/JXn2EKH"
+            href="https://www.google.com/search?rlz=1C1VDKB_enIN1143IN1143&sca_esv=5999353cb99206ac&sxsrf=APpeQnsZmaH83nF0h1fVXJOs-Fxst1sInA:1784536788319&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_zy9v7WyQLZdmQhDXKGqntMpAdtVsgvUIKXAYUxTU8_FLUM5Xo0N9MrbVbDUstTU8HqYrLPM2lSLlitMnNe4DBwpRb7bCsIe0X6kSl5DB6tM5U4oTw%3D%3D&q=Design+Ur+Desire+Reviews&sa=X&ved=2ahUKEwiauOzK7eCVAxWYzDgGHXAOD9YQ0bkNegQIKhAF&biw=1280&bih=607&dpr=1.5"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C8A96A] hover:text-[#A8874A] transition-colors"
@@ -129,3 +134,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

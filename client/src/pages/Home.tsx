@@ -1,4 +1,4 @@
-import { ChevronRight, Phone, MessageCircle, MapPin, Clock, X, Menu, Download, Instagram, Facebook, Youtube } from "lucide-react";
+import { ChevronRight, Phone, MessageCircle, MapPin, Clock, X, Menu, Instagram, Facebook, Youtube } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useLoading } from "@/contexts/LoadingContext";
 
@@ -204,24 +204,6 @@ export default function Home() {
       
       <StyleQuiz />
 
-      {/* ── BROCHURE DOWNLOAD ── */}
-      <section className="py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#2B2B2B] relative overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('/images/luxury_living_room.webp')" }} />
-        <div className="max-w-[60rem] mx-auto text-center relative z-10">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-[#C8A96A] font-bold mb-3">Explore Our Work</p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-8 leading-[1.1]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Download the Design Ur Desire Lookbook</h2>
-          <p className="text-[#999] font-light max-w-2xl mx-auto mb-10 text-sm sm:text-base leading-relaxed">
-            Get an exclusive look at our finest projects, our design philosophy, and a comprehensive guide to our interior design services and packages.
-          </p>
-          <a
-            href="https://wa.me/919739570009?text=Hi%20Design%20Ur%20Desire%2C%20I%20would%20like%20to%20download%20your%20design%20lookbook%20and%20brochure."
-            target="_blank" rel="noopener noreferrer"
-            className="btn-dud btn-primary-gold"
-          >
-            <Download size={18} /> Download Free Brochure
-          </a>
-        </div>
-      </section>
 
       <AppointmentBooking />
 
