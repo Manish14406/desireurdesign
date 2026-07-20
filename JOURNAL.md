@@ -15,17 +15,46 @@ The **Interior Style Quiz** and the integrated **Cost Calculator Consultation Fl
 
 ## 3. User Journey & Interaction Flow
 
-### A. Interior Style Quiz Flow
-1. **Introduction**: The user is presented with a clean, minimal header explaining the purpose of the quiz.
-2. **Question Progression**: The user clicks through 4 interactive questions.
-3. **Progress Tracking**: A dynamic pill-shaped progress indicator scales and highlights the active question.
-4. **Results Display**: On answering the final question:
-   - The user's dominant style recommendation is revealed with a fade-in animation.
-   - A high-quality showcase image is rendered.
-   - A descriptive 2–3 line summary highlights the style's core features.
-5. **Contact Form**: An elegant, 2-field form (Name & Phone) is rendered directly on the result page, pre-filled from the cost calculator context if already entered.
-6. **WhatsApp CTA**: Clicking "Discuss Your Project" validates details and opens WhatsApp with a pre-formatted message.
-7. **Reset Option**: A secondary "Retake Quiz" button restarts the flow from Question 1.
+### A. Interior Style Quiz Flow (Step-by-Step Walkthrough)
+
+1. **Section Discovery (Scroll & Hook)**:
+   - As the user scrolls down the landing page to the "Find Your Style" section, they are greeted by a clean, premium off-white header cards panel: *“Not sure where to start? Take our quick quiz to discover the interior style that perfectly matches your personality.”*
+   
+2. **First Click (Initiating the Quiz)**:
+   - The interactive container initializes on Question 1: *"How do you want your home to feel?"*
+   - A row of 4 horizontal pill-shaped progress indicators is centered at the top. The first pill is elongated and highlighted in the brand's gold color (`#C8A96A`), indicating the user is on the first step.
+   
+3. **Question Interaction & Choice Selection**:
+   - The user is presented with 4 clear, high-contrast, double-bordered option buttons (e.g., *Calm & Serene*, *Rich & Opulent*).
+   - **Visual feedback**: Hovering over an option smoothly animates the border from light sand (`#E9E3D8`) to rich gold (`#C8A96A`), applies a subtle gold shadow glow, and fades in an inner selection circle indicator.
+   - **Progressive transition**: Clicking an option registers the choice (mapping to one of the style weights) and instantly triggers a slide-out/slide-in transition, advancing the progress pills and loading the next question without any page refresh.
+   
+4. **Subsequent Questions**:
+   - **Step 2**: *"Which color palette draws you in?"* (Neutral tones, Bold/Dark, Monochrome, or Earthy tones).
+   - **Step 3**: *"What materials do you prefer?"* (Linen/light wood, Marble/velvet, Steel/concrete, or Antique metals/dark wood).
+   - **Step 4 (Final)**: *"What is your priority for the space?"* (Airiness/maintenance, Statements, Smart storage, or Timeless elegance).
+
+5. **Style Recommendation Calculation (Instant Calculation)**:
+   - Immediately upon clicking the final option, the system aggregates the selection array and runs the mode calculation algorithm.
+   - It identifies which style option was clicked most frequently and maps it to one of the 4 master styles: **Minimalist Elegance**, **Premium Luxury**, **Sleek Modern**, or **Timeless Classic**.
+   
+6. **Result Screen (Reveal & Details Form)**:
+   - The container transitions to a clean, white summary layout:
+     - **Title**: *"Your Design Style Is [Style Name]"* in large serif headers.
+     - **Image Header**: A high-quality render representing the style loads inside a soft-bordered `aspect-[16/10]` card with scale animations on hover.
+     - **Description**: A curated paragraph explaining the design traits (e.g. *“You prefer clean lines, uncluttered spaces...”*).
+     
+7. **Lead Capture Form (Frictionless Lead Hand-off)**:
+   - Right below the description, the user sees a **"Consultation Details"** form with fields for **Full Name** and **Phone Number**.
+   - If the user had previously calculated their kitchen/home estimate in the **Cost Calculator** section, their details are automatically pulled from the shared context and pre-filled in these inputs.
+   - Validation takes place instantly upon hitting submit. If a field is empty or malformed (e.g., invalid phone format), a clean alert message slides up under the field.
+
+8. **WhatsApp Launch (Discuss Your Project)**:
+   - Clicking **"Discuss Your Project"** triggers a brief 800ms loading state with a spinning indicator (`Loader2`) to prevent double-clicks.
+   - A new browser tab opens pointing to `wa.me/` with the plain text, UTF-8 formatted message containing the user's name, phone, and recommended style.
+   
+9. **Retake Cycle**:
+   - If the user wishes to explore other outcomes or change their selections, clicking **"Retake Quiz"** resets the current step back to 0, flushes the stored answers, and mounts Question 1 fresh.
 
 ### B. Cost Calculator Consultation Flow
 1. **Calculator Interaction**: The user adjusts property type, BHK, and carpet area.

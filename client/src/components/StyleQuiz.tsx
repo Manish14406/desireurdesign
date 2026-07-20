@@ -1,5 +1,5 @@
-import { useState, useId, useRef, useEffect } from "react";
-import { ArrowRight, RefreshCcw, User, Phone, AlertCircle, Loader2 } from "lucide-react";
+import { useState, useId, useEffect } from "react";
+import { ArrowRight, ArrowLeft, RefreshCcw, User, Phone, AlertCircle, Loader2 } from "lucide-react";
 import { useCalculator } from "@/contexts/CalculatorContext";
 
 // ─────────────────────────────────────────────────────────────
@@ -11,74 +11,111 @@ const WHATSAPP_NUMBER = "919739570009";
 type Question = {
   id: string;
   title: string;
-  options: { label: string; value: string }[];
+  options: string[];
 };
 
 const questions: Question[] = [
   {
-    id: "vibe",
-    title: "How do you want your home to feel?",
+    id: "atmosphere",
+    title: "When you walk through your front door, what's the first feeling you want to embrace you?",
     options: [
-      { label: "Calm & Serene", value: "minimal" },
-      { label: "Rich & Opulent", value: "luxury" },
-      { label: "Sleek & Uncluttered", value: "modern" },
-      { label: "Warm & Traditional", value: "classic" },
+      "A peaceful sanctuary to unwind (Calm & Cozy)",
+      "An energetic, inspiring creative hub (Vibrant & Lively)",
+      "A sleek, uncluttered breath of fresh air (Clean & Minimal)",
+      "A warm, grand, and welcoming heritage (Classic & Rich)",
+    ],
+  },
+  {
+    id: "favoriteStyle",
+    title: "How would your friends describe your personal style?",
+    options: [
+      "Simple & structured (The Effortless Minimalist)",
+      "Bold & expressive (The Trendsetter)",
+      "Warm & inviting (The Cozy Host)",
+      "Detailed & artistic (The Curation Enthusiast)",
+    ],
+  },
+  {
+    id: "favoriteRoom",
+    title: "Where do you envision spending your absolute favorite moments at home?",
+    options: [
+      "Gathered around a spacious kitchen island sharing meals",
+      "Curled up with a book in a cozy reading corner",
+      "Hosting movie nights or deep conversations in a lively living room",
+      "Unwinding in a spa-like bedroom sanctuary",
+    ],
+  },
+  {
+    id: "inspiration",
+    title: "Where do you usually find yourself gathering design ideas?",
+    options: [
+      "Nature, travel, and quiet outdoor landscapes",
+      "High-end design magazines and boutique hotels",
+      "Pinterest boards, Instagram, and modern design blogs",
+      "Vintage shops, art galleries, and historic architecture",
+    ],
+  },
+  {
+    id: "lifestyle",
+    title: "How does your household typically flow on a daily basis?",
+    options: [
+      "Busy and active—kids, pets, and lots of movement",
+      "Work-from-home focus—need quiet, structured zones",
+      "Social butterfly—frequent dinner parties and guests",
+      "Slow living—focus on self-care, cooking, and relaxation",
     ],
   },
   {
     id: "colors",
-    title: "Which color palette draws you in?",
+    title: "Which color palette makes your heart sing?",
     options: [
-      { label: "Neutrals (Whites, Beiges, Greys)", value: "minimal" },
-      { label: "Bold & Dark (Charcoal, Deep Blue, Gold)", value: "luxury" },
-      { label: "Monochrome (Black, White, High Contrast)", value: "modern" },
-      { label: "Warm Earth Tones (Browns, Terracotta)", value: "classic" },
+      "Soothing neutrals (warm beiges, soft creams, greys)",
+      "Deep, moody, and dramatic (charcoal, emerald, navy, black)",
+      "Earthy & organic (forest greens, terracotta, warm rust)",
+      "Cheerful & bright (pastels, pops of accent colors)",
     ],
   },
   {
     id: "materials",
-    title: "What materials do you prefer?",
+    title: "If you could run your hands over any texture right now, which feels right?",
     options: [
-      { label: "Light Wood, Linen, Matte Finishes", value: "minimal" },
-      { label: "Marble, Brass, Velvet, High Gloss", value: "luxury" },
-      { label: "Glass, Steel, Concrete, Leather", value: "modern" },
-      { label: "Dark Wood, Silk, Antique Metals", value: "classic" },
+      "Natural linen, light-toned raw wood, and matte stone",
+      "Rich velvet, polished marble, and brushed brass details",
+      "Industrial steel, smooth glass, and clean concrete",
+      "Deep grain oak, woven rattan, and warm leather",
     ],
   },
   {
     id: "priority",
-    title: "What is your priority for the space?",
+    title: "What is the single most important element that makes a home feel truly complete?",
     options: [
-      { label: "Airy, open, and easy to maintain", value: "minimal" },
-      { label: "A space that makes a statement", value: "luxury" },
-      { label: "Functional with smart storage", value: "modern" },
-      { label: "Timeless elegance that never ages", value: "classic" },
+      "Abundant natural light and open, breathing space",
+      "Smart, hidden organization that keeps clutter away",
+      "A display of personal treasures, books, and art",
+      "Plush, ultra-comfortable seating that invites you to sink in",
+    ],
+  },
+  {
+    id: "expectations",
+    title: "What is your biggest expectation from our collaboration?",
+    options: [
+      "Bring professional expertise to maximize space and function",
+      "Save me time by managing everything from design to execution",
+      "Help me discover and define my own style instead of copying trends",
+      "Co-create a unique masterpiece that stands out from the ordinary",
+    ],
+  },
+  {
+    id: "additionalPreference",
+    title: "Is there any unique feature or special touch you've always dreamed of having?",
+    options: [
+      "A dedicated home library or cozy reading nook",
+      "A custom coffee bar, wine station, or hidden pantry",
+      "A gorgeous accent wall or custom statement lighting",
+      "Smart-home automation and integrated tech spaces",
     ],
   },
 ];
-
-const results = {
-  minimal: {
-    title: "Minimalist Elegance",
-    desc: "You prefer clean lines, uncluttered spaces, and a serene, calming environment. Your ideal home is airy, functional, and relies on subtle textures rather than loud patterns.",
-    image: "/images/bedroom_minimal.webp",
-  },
-  luxury: {
-    title: "Premium Luxury",
-    desc: "You have an eye for the finer things. Your space should feel opulent and rich, featuring premium materials like marble, metallic accents, and plush fabrics.",
-    image: "/images/luxury_living_room.webp",
-  },
-  modern: {
-    title: "Sleek Modern",
-    desc: "You value functionality and a sleek aesthetic. Your home favors monochromatic palettes, strong geometric forms, and innovative materials.",
-    image: "/images/living_room_contemporary.webp",
-  },
-  classic: {
-    title: "Timeless Classic",
-    desc: "You appreciate tradition and warmth. Your style incorporates rich woods, symmetrical layouts, and elegant details that have stood the test of time.",
-    image: "/images/bedroom_royal.webp",
-  },
-};
 
 // ─────────────────────────────────────────────────────────────
 // VALIDATION HELPERS
@@ -112,57 +149,46 @@ export default function StyleQuiz() {
   const uid = useId();
   const { snapshot, setSnapshot } = useCalculator();
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<string[]>([]);
-  const [isFinished, setIsFinished] = useState(false);
+  // currentStep: 0 = Welcome, 1-10 = Questions, 11 = Finished/Summary
+  const [currentStep, setCurrentStep] = useState(0);
+  
+  // Store selections as key-value pairs
+  const [selections, setSelections] = useState<Record<string, string>>({});
 
-  // Name & Phone input values
+  // Client Details
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isLoading, setIsLoading] = useState(false);
 
-  // Sync inputs from calculator snapshot if they are already populated
+  // Sync inputs from shared context
   useEffect(() => {
     if (snapshot.calcName) setName(snapshot.calcName);
     if (snapshot.calcPhone) setPhone(snapshot.calcPhone);
   }, [snapshot.calcName, snapshot.calcPhone]);
 
-  const handleSelect = (value: string) => {
-    const newAnswers = [...answers, value];
-    setAnswers(newAnswers);
+  const handleSelect = (questionId: string, optionValue: string) => {
+    setSelections((prev) => ({
+      ...prev,
+      [questionId]: optionValue,
+    }));
 
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion((prev) => prev + 1);
-    } else {
-      setIsFinished(true);
+    // Automatically advance to the next step
+    setCurrentStep((prev) => prev + 1);
+  };
+
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep((prev) => prev - 1);
     }
   };
 
   const resetQuiz = () => {
-    setCurrentQuestion(0);
-    setAnswers([]);
-    setIsFinished(false);
+    setCurrentStep(0);
+    setSelections({});
     setErrors({});
     setIsLoading(false);
-  };
-
-  const getResultKey = (): keyof typeof results => {
-    const counts = answers.reduce((acc, val) => {
-      acc[val] = (acc[val] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    let maxKey = "minimal";
-    let maxVal = 0;
-    for (const key in counts) {
-      if (counts[key] > maxVal) {
-        maxVal = counts[key];
-        maxKey = key;
-      }
-    }
-    return maxKey as keyof typeof results;
   };
 
   const handleFieldChange = (key: "name" | "phone", value: string) => {
@@ -180,7 +206,7 @@ export default function StyleQuiz() {
     }
   };
 
-  const handleDiscuss = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isLoading) return;
 
@@ -198,18 +224,33 @@ export default function StyleQuiz() {
     setErrors({});
     setIsLoading(true);
 
-    const styleTitle = results[getResultKey()].title;
     const lines = [
-      "*INTERIOR DESIGN STYLE QUIZ RESULT*",
+      "INTERIOR DESIGN DISCOVERY",
       "",
       "Client Details",
       `• Name: ${name.trim()}`,
       `• Phone: ${phone.trim()}`,
       "",
-      "Style Details",
-      `• Recommended Style: ${styleTitle}`,
+      "Customer Preferences",
       "",
-      "I have completed the Interior Style Quiz and would like to discuss my design recommendations.",
+      `• Home Atmosphere: ${selections.atmosphere || ""}`,
+      `• Favourite Style: ${selections.favoriteStyle || ""}`,
+      `• Favourite Colours: ${selections.colors || ""}`,
+      `• Preferred Materials: ${selections.materials || ""}`,
+      `• Favourite Room: ${selections.favoriteRoom || ""}`,
+      `• Lifestyle: ${selections.lifestyle || ""}`,
+      `• Design Inspiration: ${selections.inspiration || ""}`,
+      `• Most Important Priority: ${selections.priority || ""}`,
+      `• Expectations from Designer: ${selections.expectations || ""}`,
+      `• Additional Preference: ${selections.additionalPreference || ""}`,
+      "",
+      "Message:",
+      "",
+      "Hello Design Ur Desire,",
+      "",
+      "I completed the Design Discovery Quiz. Below are my preferences to help you understand my vision before our consultation.",
+      "",
+      "Please review them before contacting me.",
       "",
       "Thank you.",
     ];
@@ -227,105 +268,170 @@ export default function StyleQuiz() {
     }, 800);
   };
 
-  const activeResult = results[isFinished ? getResultKey() : "minimal"];
+  const summaryFields = [
+    { label: "Home Atmosphere", val: selections.atmosphere },
+    { label: "Favourite Style", val: selections.favoriteStyle },
+    { label: "Favourite Colours", val: selections.colors },
+    { label: "Preferred Materials", val: selections.materials },
+    { label: "Favourite Room", val: selections.favoriteRoom },
+    { label: "Lifestyle", val: selections.lifestyle },
+    { label: "Design Inspiration", val: selections.inspiration },
+    { label: "Most Important Priority", val: selections.priority },
+    { label: "Expectations from Designer", val: selections.expectations },
+    { label: "Additional Preference", val: selections.additionalPreference },
+  ];
 
   return (
     <section
       id="quiz"
       className="py-20 sm:py-28 md:py-40 px-4 sm:px-8 md:px-12 bg-[#F8F5F0] border-t border-[#E9E3D8] overflow-hidden"
-      aria-label="Interior Style Quiz"
+      aria-label="Design Personality Discovery"
     >
       <div className="max-w-[54rem] mx-auto text-center">
-        {/* Header */}
-        {!isFinished && (
+        {/* Section Header */}
+        {currentStep <= 10 && (
           <div className="mb-12">
             <p
               className="text-[10px] uppercase tracking-[0.4em] text-[#C8A96A] font-bold mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Find Your Style
+              Interactive Discovery
             </p>
-            <h2 className="cinema-heading mb-4">Interior Style Quiz</h2>
+            <h2 className="cinema-heading mb-4">Design Personality Quiz</h2>
             <div className="cinema-accent-line mx-auto" />
-            <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-              Not sure where to start? Take our quick quiz to discover the interior style that perfectly matches your personality.
-            </p>
           </div>
         )}
 
-        {/* Quiz Box */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-[#E9E3D8] transition-all duration-500">
-          {!isFinished ? (
-            <div className="animate-fade-in">
-              {/* Progress Indicator */}
-              <div className="flex justify-center gap-2 mb-10">
-                {questions.map((_, idx) => (
-                  <div
-                    key={idx}
-                    className={`h-1 rounded-full transition-all duration-500 ${
-                      idx <= currentQuestion ? "w-8 sm:w-12 bg-[#C8A96A]" : "w-4 bg-[#E9E3D8]"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              {/* Question text */}
+        {/* Discovery container */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-[#E9E3D8] transition-all duration-500 min-h-[380px] flex flex-col justify-center">
+          {currentStep === 0 ? (
+            /* Welcome / Introduction Screen */
+            <div className="animate-fade-in text-center max-w-xl mx-auto py-4">
+              <span className="inline-block text-4xl mb-6 animate-bounce">✨</span>
               <h3
-                className="text-2xl sm:text-3xl font-black text-[#2B2B2B] mb-10 leading-tight"
+                className="text-2xl sm:text-3xl font-black text-[#2B2B2B] mb-6 leading-tight"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                {questions[currentQuestion].title}
+                Let's Play a Fun Design Quiz!
               </h3>
+              <p className="text-[#666] font-light text-sm sm:text-base leading-relaxed mb-10">
+                Take just 2 minutes to answer a few fun questions. This helps us understand your taste, lifestyle, and vision so our designers can have a more meaningful conversation with you.
+              </p>
+              <button
+                type="button"
+                onClick={() => setCurrentStep(1)}
+                className="btn-submit inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#2B2B2B] text-white hover:bg-[#C8A96A] rounded-xl font-bold uppercase tracking-widest text-xs transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Start Quiz <ArrowRight size={16} />
+              </button>
+            </div>
+          ) : currentStep >= 1 && currentStep <= 10 ? (
+            /* Question Screen */
+            <div className="animate-fade-in flex flex-col justify-between h-full">
+              <div>
+                {/* Progress Indicator */}
+                <div className="flex justify-center gap-1.5 mb-10">
+                  {questions.map((_, idx) => (
+                    <div
+                      key={idx}
+                      className={`h-1.5 rounded-full transition-all duration-500 ${
+                        idx + 1 <= currentStep ? "w-8 sm:w-12 bg-[#C8A96A]" : "w-3 bg-[#E9E3D8]"
+                      }`}
+                    />
+                  ))}
+                </div>
 
-              {/* Options list */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {questions[currentQuestion].options.map((opt, idx) => (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => handleSelect(opt.value)}
-                    className="p-5 rounded-2xl border-2 border-[#E9E3D8] bg-white hover:border-[#C8A96A] hover:bg-[#FBF8F3] hover:shadow-[0_4px_20px_rgba(200,169,106,0.1)] transition-all duration-300 group text-left flex items-center justify-between outline-none"
-                  >
-                    <span className="font-semibold text-[#2B2B2B] text-sm sm:text-base group-hover:text-[#C8A96A] transition-colors leading-snug">
-                      {opt.label}
-                    </span>
-                    <div className="w-5 h-5 rounded-full border-2 border-[#E9E3D8] group-hover:border-[#C8A96A] flex items-center justify-center flex-shrink-0 transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96A] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </button>
-                ))}
+                {/* Question title */}
+                <h3
+                  className="text-xl sm:text-2xl md:text-3xl font-black text-[#2B2B2B] mb-10 leading-tight"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  {questions[currentStep - 1].title}
+                </h3>
+
+                {/* Options */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                  {questions[currentStep - 1].options.map((opt, idx) => {
+                    const isSelected = selections[questions[currentStep - 1].id] === opt;
+                    return (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => handleSelect(questions[currentStep - 1].id, opt)}
+                        className={`p-5 rounded-2xl border-2 text-left flex items-center justify-between outline-none transition-all duration-300 group ${
+                          isSelected
+                            ? "border-[#C8A96A] bg-[#FBF8F3] shadow-[0_4px_20px_rgba(200,169,106,0.15)]"
+                            : "border-[#E9E3D8] bg-white hover:border-[#C8A96A] hover:bg-[#FBF8F3] hover:shadow-[0_4px_20px_rgba(200,169,106,0.1)]"
+                        }`}
+                      >
+                        <span className={`font-semibold text-sm sm:text-base leading-snug transition-colors ${
+                          isSelected ? "text-[#C8A96A]" : "text-[#2B2B2B] group-hover:text-[#C8A96A]"
+                        }`}>
+                          {opt}
+                        </span>
+                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
+                          isSelected ? "border-[#C8A96A]" : "border-[#E9E3D8] group-hover:border-[#C8A96A]"
+                        }`}>
+                          <div className={`w-2 h-2 rounded-full bg-[#C8A96A] transition-all ${
+                            isSelected ? "scale-100 opacity-100" : "scale-50 opacity-0 group-hover:opacity-100 group-hover:scale-100"
+                          }`} />
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Navigation Controls */}
+              <div className="flex items-center justify-between mt-10 pt-6 border-t border-[#E9E3D8]/50">
+                <button
+                  type="button"
+                  onClick={handleBack}
+                  className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold uppercase tracking-widest text-[#666] hover:text-[#2B2B2B] hover:bg-[#F8F5F0] transition-all"
+                >
+                  <ArrowLeft size={14} /> Back
+                </button>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#999]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  Question {currentStep} of 10
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setCurrentStep((prev) => prev + 1)}
+                  className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold uppercase tracking-widest text-[#C8A96A] hover:text-[#2B2B2B] transition-all"
+                >
+                  {selections[questions[currentStep - 1].id] ? "Next" : "Skip"} <ArrowRight size={14} />
+                </button>
               </div>
             </div>
           ) : (
-            /* Results Screen */
+            /* Results / Final Step Screen */
             <div className="animate-fade-in text-center max-w-2xl mx-auto">
+              <span className="inline-block text-4xl mb-4 animate-bounce">🏡</span>
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#C8A96A] font-bold mb-3">
-                Your Design Style Is
+                Discovery Complete
               </p>
               <h3
-                className="text-3xl sm:text-4xl md:text-5xl font-black text-[#2B2B2B] mb-6 leading-tight"
+                className="text-2xl sm:text-3xl font-black text-[#2B2B2B] mb-4 leading-tight"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                {activeResult.title}
+                Your Design Profile
               </h3>
-
-              {/* Image Preview */}
-              <div className="rounded-2xl overflow-hidden aspect-[16/10] mb-6 shadow-md border border-[#E9E3D8] bg-[#F8F5F0]">
-                <img
-                  src={activeResult.image}
-                  alt={activeResult.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  loading="eager"
-                />
-              </div>
-
-              {/* Description */}
-              <p className="text-[#666] font-light leading-relaxed text-sm sm:text-base mb-8">
-                {activeResult.desc}
+              <p className="text-[#666] font-light text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-8">
+                Thank you! We now have a better understanding of your design preferences. Our designers will use these insights to make your consultation more personalized.
               </p>
 
-              {/* User Details Form right before action */}
-              <form onSubmit={handleDiscuss} className="border-t border-[#E9E3D8] pt-8 mb-8 text-left space-y-4">
+              {/* Selections Summary Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-left border border-[#E9E3D8] rounded-2xl p-5 bg-[#FDFDFD]">
+                {summaryFields.map((field, idx) => (
+                  <div key={idx} className="p-3 bg-[#F8F5F0] rounded-xl border border-[#E9E3D8]/60">
+                    <p className="text-[8px] sm:text-[9px] uppercase tracking-widest text-[#999] font-bold">{field.label}</p>
+                    <p className="text-xs font-bold text-[#2B2B2B] mt-0.5 leading-snug">{field.val || "Skipped"}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Consultation Details Capture Form */}
+              <form onSubmit={handleSubmit} className="border-t border-[#E9E3D8] pt-8 mb-8 text-left space-y-4">
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#C8A96A] font-bold mb-2 text-center">
                   Consultation Details
                 </p>

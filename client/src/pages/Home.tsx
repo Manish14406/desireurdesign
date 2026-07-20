@@ -52,8 +52,7 @@ export default function Home() {
               style={{
                 opacity: isLoading ? 0 : 1,
                 transition: isLoading ? 'none' : 'opacity 0.5s ease-out',
-                filter: 'brightness(1.2) contrast(1.1)',
-                dropShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                filter: 'brightness(1.2) contrast(1.1) drop-shadow(0px 1px 2px rgba(0,0,0,0.1))',
               }}
             />
             <div className="w-px h-8 sm:h-10 lg:h-11 bg-[#E9E3D8] flex-shrink-0 hidden sm:block" />
