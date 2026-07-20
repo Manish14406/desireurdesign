@@ -1,0 +1,796 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* ── Design Ur Desire — Premium Light Luxury Palette ── */
+  --brand-gold:        #C8A96A;
+  --brand-gold-dark:   #A8874A;
+  --brand-gold-light:  #E8D5B0;
+  --section-alt:       #F8F5F0;
+  --charcoal:          #2B2B2B;
+  --medium-gray:       #666666;
+  --light-border:      #E9E3D8;
+  --warm-white:        #FFFFFF;
+
+  /* Tailwind design tokens */
+  --background:               #FFFFFF;
+  --foreground:               #2B2B2B;
+  --primary:                  #C8A96A;
+  --primary-foreground:       #FFFFFF;
+  --sidebar-primary:          #C8A96A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --radius:                   0.75rem;   /* 12px base radius */
+
+  --card:                     #FFFFFF;
+  --card-foreground:          #2B2B2B;
+  --popover:                  #FFFFFF;
+  --popover-foreground:       #2B2B2B;
+  --secondary:                #F8F5F0;
+  --secondary-foreground:     #2B2B2B;
+  --muted:                    #F8F5F0;
+  --muted-foreground:         #666666;
+  --accent:                   #C8A96A;
+  --accent-foreground:        #FFFFFF;
+  --destructive:              #DC2626;
+  --destructive-foreground:   #FFFFFF;
+  --border:                   #E9E3D8;
+  --input:                    #F8F5F0;
+  --ring:                     #C8A96A;
+
+  --sidebar:                   #FFFFFF;
+  --sidebar-foreground:        #2B2B2B;
+  --sidebar-accent:            #C8A96A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border:            #E9E3D8;
+  --sidebar-ring:              #C8A96A;
+
+  --chart-1:  #C8A96A;
+  --chart-2:  #A8874A;
+  --chart-3:  #2B2B2B;
+  --chart-4:  #E8D5B0;
+  --chart-5:  #F8F5F0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UTILITY CLASSES
+───────────────────────────────────────────────────────────── */
+
+.text-brand-gold   { color: var(--brand-gold); }
+.bg-brand-gold     { background-color: var(--brand-gold); }
+.border-brand-gold { border-color: var(--brand-gold); }
+.text-brand-dark   { color: var(--charcoal); }
+
+/* Light glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(233, 227, 216, 0.8);
+}
+
+/* Subtle gold glow — light context */
+.glow-gold {
+  box-shadow: 0 8px 32px rgba(200, 169, 106, 0.18), 0 2px 8px rgba(200, 169, 106, 0.10);
+}
+
+.glow-warm {
+  box-shadow: 0 4px 20px rgba(200, 169, 106, 0.12);
+}
+
+/* Light ambient orbs */
+.light-leak {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.light-leak-gold {
+  background: radial-gradient(circle, rgba(200, 169, 106, 0.12) 0%, rgba(200, 169, 106, 0) 70%);
+}
+
+.light-leak-warm {
+  background: radial-gradient(circle, rgba(248, 245, 240, 0.8) 0%, rgba(248, 245, 240, 0) 70%);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────────────────────────── */
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes antigravity {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+.antigravity {
+  animation: antigravity 6s ease-in-out infinite;
+}
+
+.antigravity-alt {
+  animation: antigravity 4.5s ease-in-out infinite reverse;
+}
+
+/* Gold shimmer on text */
+@keyframes goldShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #C8A96A, #F0DEB8, #A8874A, #C8A96A);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Warm pulse — light context */
+@keyframes warmPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 169, 106, 0.0),  0 4px 16px rgba(200, 169, 106, 0.15); }
+  50%       { box-shadow: 0 0 0 6px rgba(200, 169, 106, 0.08), 0 4px 24px rgba(200, 169, 106, 0.28); }
+}
+
+.warm-pulse {
+  animation: warmPulse 3s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   IMAGE SMOOTH LOADING SYSTEM — light skeleton
+───────────────────────────────────────────────────────────── */
+
+@keyframes imgShimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.img-shimmer {
+  background: linear-gradient(
+    110deg,
+    #F8F5F0 30%,
+    #EDE8E0 45%,
+    #E9E3D8 50%,
+    #EDE8E0 55%,
+    #F8F5F0 70%
+  );
+  background-size: 200% 100%;
+  animation: imgShimmer 1.6s ease-in-out infinite;
+}
+
+/* grayscale-hover utility */
+.grayscale-hover img {
+  filter: grayscale(20%);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.grayscale-hover:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* Luxury serif text for brand moments */
+.luxury-serif {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BASE STYLES
+───────────────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #FFFFFF;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: #2B2B2B;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #2B2B2B;
+  }
+  h1 {
+    @apply text-5xl md:text-6xl;
+    line-height: 1.1;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl;
+    line-height: 1.15;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+    line-height: 1.2;
+  }
+  p {
+    line-height: 1.75;
+    letter-spacing: 0.2px;
+    color: #666666;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LAYOUT COMPONENTS
+───────────────────────────────────────────────────────────── */
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Premium button base */
+  .btn-primary {
+    @apply px-8 py-3 font-medium transition-all duration-300 ease-out active:scale-95;
+    border-radius: 12px;
+    background: #C8A96A;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+  }
+  .btn-primary:hover { background: #A8874A; }
+
+  .btn-secondary {
+    @apply px-8 py-3 font-medium transition-all duration-300 ease-out active:scale-95;
+    border-radius: 12px;
+    background: #FFFFFF;
+    color: #C8A96A;
+    border: 1.5px solid #C8A96A;
+    letter-spacing: 0.5px;
+  }
+  .btn-secondary:hover { background: #FBF8F3; }
+
+  .btn-outline {
+    @apply px-8 py-3 font-medium transition-all duration-300 ease-out;
+    border-radius: 12px;
+    border: 2px solid #C8A96A;
+    color: #C8A96A;
+    letter-spacing: 0.5px;
+  }
+  .btn-outline:hover {
+    background: #C8A96A;
+    color: #FFFFFF;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-32 lg:py-40;
+  }
+
+  /* Gold accent divider */
+  .divider-gold {
+    @apply h-[3px] w-14 rounded-full;
+    background: linear-gradient(to right, #C8A96A, #E8D5B0);
+  }
+
+  /* Fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+
+  /* Slide up */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-slide-up { animation: slideUp 0.6s ease-out; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CINEMA HEADING SYSTEM — adapted for light theme
+───────────────────────────────────────────────────────────── */
+
+.cinema-heading {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: clamp(2.4rem, 7vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: #2B2B2B;
+}
+
+.cinema-accent-line {
+  height: 3px;
+  width: 5rem;
+  background: linear-gradient(to right, #C8A96A, #E8D5B0);
+  border-radius: 999px;
+  margin-top: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   3D CUBE — light themed faces
+───────────────────────────────────────────────────────────── */
+
+.cinema-perspective {
+  perspective: 2000px;
+}
+
+.cube-wrapper {
+  width: min(45vh, 320px);
+  height: min(45vh, 320px);
+  transform-style: preserve-3d;
+  animation: rotateCube 20s linear infinite;
+  position: relative;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border: 1px solid rgba(200, 169, 106, 0.25);
+  background: #F8F5F0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cube-face img { opacity: 0.85; }
+
+.cube-front  { transform: rotateX(0deg)    translateZ(min(22.5vh, 160px)); }
+.cube-bottom { transform: rotateX(-90deg)  translateZ(min(22.5vh, 160px)); }
+.cube-back   { transform: rotateX(-180deg) translateZ(min(22.5vh, 160px)); }
+.cube-top    { transform: rotateX(90deg)   translateZ(min(22.5vh, 160px)); }
+
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg); }
+  100% { transform: rotateX(360deg); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PREMIUM BUTTON SYSTEM — Light Luxury
+───────────────────────────────────────────────────────────── */
+
+/* Shared base */
+.btn-dud {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  overflow: clip;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              color 0.3s ease;
+}
+
+/* Shimmer sweep */
+.btn-dud::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  transition: background-position 0.6s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.btn-dud:hover::before { background-position: 100% 0; }
+.btn-dud:active { transform: scale(0.97) !important; }
+
+/* ── 1. Primary Gold — soft gold, white text */
+.btn-primary-gold {
+  background: linear-gradient(135deg, #C8A96A 0%, #B8954A 50%, #A8874A 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(200, 169, 106, 0.3);
+  box-shadow:
+    0 4px 16px rgba(200, 169, 106, 0.30),
+    0 1px 0 rgba(255, 255, 255, 0.20) inset;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+}
+.btn-primary-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 8px 28px rgba(200, 169, 106, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.20) inset;
+  background: linear-gradient(135deg, #D4B87A 0%, #C8A96A 50%, #B8954A 100%);
+}
+
+/* ── 2. Ghost Gold — white bg, gold border */
+.btn-ghost-gold {
+  background: #FFFFFF;
+  color: #C8A96A;
+  border: 1.5px solid #C8A96A;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(200, 169, 106, 0.10);
+}
+.btn-ghost-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: #FBF8F3;
+  border-color: #A8874A;
+  color: #A8874A;
+  box-shadow: 0 6px 24px rgba(200, 169, 106, 0.20);
+}
+
+/* ── 3. Ghost Light — for light hero context */
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.85);
+  color: #2B2B2B;
+  border: 1.5px solid #E9E3D8;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+.btn-ghost-light:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #C8A96A;
+  color: #C8A96A;
+  box-shadow: 0 6px 20px rgba(200, 169, 106, 0.15);
+}
+
+/* ── 4. WhatsApp Green CTA */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+  background: linear-gradient(135deg, #2FE070 0%, #25D366 100%);
+}
+
+/* ── 5. Nav pill — compact for top navigation */
+.btn-nav-pill {
+  background: linear-gradient(135deg, #C8A96A 0%, #A8874A 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  box-shadow: 0 2px 12px rgba(200, 169, 106, 0.30);
+}
+.btn-nav-pill:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 4px 20px rgba(200, 169, 106, 0.50);
+}
+
+/* ── 6. Tab pill — collection filter tabs */
+.btn-tab {
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  border: 1.5px solid #E9E3D8;
+  color: #999999;
+  background: #FFFFFF;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.btn-tab:hover {
+  border-color: #C8A96A;
+  color: #C8A96A;
+  box-shadow: 0 2px 12px rgba(200, 169, 106, 0.15);
+}
+.btn-tab-active {
+  background: linear-gradient(135deg, #C8A96A 0%, #A8874A 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 2px 12px rgba(200, 169, 106, 0.35);
+}
+
+/* ── 7. Icon round button */
+.btn-icon-round {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #E9E3D8;
+  background: #FFFFFF;
+  color: #2B2B2B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+.btn-icon-round:hover {
+  background: #FBF8F3;
+  border-color: #C8A96A;
+  color: #C8A96A;
+  box-shadow: 0 4px 16px rgba(200, 169, 106, 0.20);
+  transform: scale(1.08);
+}
+
+/* ── 8. FAB — floating action button */
+.btn-fab {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.btn-fab:hover {
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ── 9. Submit full-width */
+.btn-submit {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #C8A96A 0%, #B8954A 50%, #A8874A 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 20px rgba(200, 169, 106, 0.30),
+    0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  transition: all 0.3s ease;
+}
+.btn-submit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.20) 50%, transparent 75%);
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  transition: background-position 0.6s ease;
+}
+.btn-submit:hover::after { background-position: 100% 0; }
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 169, 106, 0.45);
+  background: linear-gradient(135deg, #D4B87A 0%, #C8A96A 50%, #B8954A 100%);
+}
+.btn-submit:active { transform: scale(0.98); }
+.btn-submit:disabled {
+  opacity: 0.70;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 0 4px 20px rgba(200, 169, 106, 0.15);
+}
+
+/* ── 10. Card link */
+.btn-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #C8A96A;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: all 0.25s ease;
+}
+.btn-card-link:hover {
+  gap: 0.65rem;
+  border-bottom-color: #C8A96A;
+  color: #A8874A;
+}
+
+/* ── 10. Card link text */
+.btn-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C8A96A;
+  transition: all 0.3s ease;
+}
+.group:hover .btn-card-link {
+  color: #2B2B2B;
+  transform: translateX(4px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UTILITIES
+───────────────────────────────────────────────────────────── */
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* ── Consultation form — field error shake ── */
+@keyframes fieldShake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-4px); }
+  40%       { transform: translateX(4px); }
+  60%       { transform: translateX(-3px); }
+  80%       { transform: translateX(3px); }
+}
+.field-error-shake {
+  animation: fieldShake 0.4s ease-out;
+}
+
+/* ── Spinner rotation (used by Loader2 icon) ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE-FIRST RESPONSIVE OVERRIDES
+───────────────────────────────────────────────────────────── */
+
+/* Ensure proper viewport height on mobile browsers (iOS Safari, etc.) */
+@supports (height: 100dvh) {
+  .h-\[100dvh\] {
+    height: 100dvh;
+  }
+}
+
+/* Smaller FAB buttons on mobile to avoid blocking content */
+@media (max-width: 639px) {
+  .btn-fab {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  /* Comfortable padding on primary buttons for mobile — prevents text clipping */
+  .btn-primary-gold {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.6rem;
+  }
+
+  .btn-ghost-gold,
+  .btn-ghost-light,
+  .btn-whatsapp {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.6rem;
+  }
+
+  .btn-nav-pill {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.625rem;
+  }
+
+  /* Ensure minimum touch targets for accessibility */
+  .btn-icon-round {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Cinema headings smaller on mobile */
+  .cinema-heading {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+}
+
+/* Safe area insets for modern phones with notches/home bars */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .fixed.bottom-5,
+  .fixed.bottom-8 {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
