@@ -20,10 +20,7 @@ export default function PortfolioSection() {
       <div className="max-w-[90rem] mx-auto">
         {/* Header */}
         <div className="mb-10 sm:mb-12">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-[#C8A96A] font-bold mb-3"
-             style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Our Work
-          </p>
+
           <h2 className="cinema-heading mb-4">Inspired by Dreams,<br />Designed for Life</h2>
           <div className="cinema-accent-line" />
           <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-2xl">
@@ -60,9 +57,7 @@ export default function PortfolioSection() {
                     {project.title}
                   </h3>
                 </div>
-                <span className="text-xs font-bold text-[#999] uppercase tracking-widest hidden sm:block">
-                  {project.year}
-                </span>
+
               </div>
             </div>
           ))}
