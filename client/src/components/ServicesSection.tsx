@@ -7,6 +7,7 @@ const HomeIcon = () => (
     <path d="M3 10.5L12 3l9 7.5V21H15v-6H9v6H3V10.5z" />
   </svg>
 );
+
 const SofaIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
     <path d="M2 13a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2H2v-2z" />
@@ -14,6 +15,7 @@ const SofaIcon = () => (
     <path d="M4 19v2M20 19v2" />
   </svg>
 );
+
 const KitchenIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
     <rect x="2" y="6" width="20" height="15" rx="1" />
@@ -76,6 +78,24 @@ const HammerIcon = () => (
   </svg>
 );
 
+const BedIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+    <path d="M2 4v16" />
+    <path d="M2 8h18a2 2 0 0 1 2 2v10" />
+    <path d="M2 17h20" />
+    <path d="M6 8v9" />
+  </svg>
+);
+
+const TempleIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+    <path d="M12 2l4 5h-8z" />
+    <path d="M8 7v10M16 7v10" />
+    <path d="M6 17h12v4H6z" />
+    <path d="M12 17v4" />
+  </svg>
+);
+
 /* ── Category groupings ── */
 const serviceCategories = [
   {
@@ -85,22 +105,22 @@ const serviceCategories = [
         icon: <HomeIcon />,
         title: "Residential Interior Design",
         desc: "Complete home interior solutions tailored to your lifestyle and aspirations.",
-        image: "/images/complete_home_interior.webp",
-        images: ["/images/complete_home_interior.webp", "/images/luxury_living_room.webp", "/images/luxury_bedroom.webp"],
+        image: "/gallery/res1.jpeg",
+        images: ["/gallery/res1.jpeg", "/gallery/res2.jpeg", "/gallery/res3.jpeg", "/gallery/res4.jpeg"],
       },
       {
         icon: <SofaIcon />,
         title: "Living Room Design",
         desc: "Elegant, functional living spaces designed for comfort, style and conversation.",
-        image: "/images/luxury_living_room.webp",
-        images: ["/images/luxury_living_room.webp", "/images/living_room_contemporary.webp", "/images/living_room_open_plan.webp"],
+        image: "/gallery/liv1.jpeg",
+        images: ["/gallery/liv1.jpeg", "/gallery/liv2.jpeg", "/gallery/liv3.jpeg", "/gallery/liv4.jpeg"],
       },
       {
         icon: <KitchenIcon />,
         title: "Modular Kitchen",
         desc: "Smart, beautiful kitchens with premium finishes, branded hardware & smart storage.",
-        image: "/images/Modular_kitchen1.webp",
-        images: ["/images/Modular_kitchen1.webp", "/images/luxury_kitchen.webp", "/images/island_kitchen.webp", "/images/parallel_kitchen.webp"],
+        image: "/images/modular_kitchen_realistic.png",
+        images: ["/images/modular_kitchen_realistic.png", "/images/luxury_kitchen.webp", "/images/island_kitchen.webp", "/images/parallel_kitchen.webp"],
       },
       {
         icon: <WardrobeIcon />,
@@ -108,6 +128,13 @@ const serviceCategories = [
         desc: "Floor-to-ceiling custom wardrobes with intelligent organisation and premium finishes.",
         image: "/images/wardrobes2.webp",
         images: ["/images/wardrobes2.webp", "/images/wardrobes1.webp", "/images/wardrobesnew4.webp", "/images/luxury_wardrobe.webp"],
+      },
+      {
+        icon: <BedIcon />,
+        title: "Bedroom Interior Design",
+        desc: "Transform your bedroom into a luxurious sanctuary for rest and relaxation.",
+        image: "/gallery/bed1.jpeg",
+        images: ["/gallery/bed1.jpeg", "/gallery/bed2.jpeg", "/gallery/bed3.jpeg", "/gallery/bed4.jpeg", "/gallery/bed5.jpeg"],
       },
     ],
   },
@@ -119,7 +146,7 @@ const serviceCategories = [
         title: "TV Unit",
         desc: "Designer TV panels and entertainment units that anchor your living space beautifully.",
         image: "/images/TVunit.webp",
-        images: ["/images/TVunit.webp", "/images/TVunits1.webp", "/images/Tvunits2.webp", "/images/TVunits3.webp"],
+        images: ["/images/TVunit.webp", "/images/TVunits1.webp", "/images/Tvunits2.webp"],
       },
       {
         icon: <BookshelfIcon />,
@@ -127,6 +154,13 @@ const serviceCategories = [
         desc: "Bespoke crockery display units combining elegance with smart, accessible storage.",
         image: "/images/crockeryunit1.webp",
         images: ["/images/crockeryunit1.webp", "/images/crockeryunit4.webp", "/images/crockeryuntnew2.webp"],
+      },
+      {
+        icon: <TempleIcon />,
+        title: "Temple Design",
+        desc: "Beautifully crafted puja units and temple spaces for spiritual serenity.",
+        image: "/gallery/temple1.jpeg",
+        images: ["/gallery/temple1.jpeg", "/gallery/temple2.jpeg", "/gallery/temple3.jpeg", "/gallery/temple4.jpeg"],
       },
     ],
   },
@@ -157,7 +191,7 @@ const serviceCategories = [
         title: "False Ceiling & Lighting",
         desc: "Stunning ceiling designs with integrated ambient, task and accent lighting systems.",
         image: "/images/falseceiling1.webp",
-        images: ["/images/falseceiling1.webp", "/images/luxury_false_ceiling.webp", "/images/falseceiling2.webp", "/images/falseceiling3.webp"],
+        images: ["/images/falseceiling1.webp", "/images/falseceiling2.webp", "/images/falseceiling3.webp", "/gallery/false.png"],
       },
       {
         icon: <HammerIcon />,
@@ -237,10 +271,10 @@ export default function ServicesSection() {
                   <div
                     key={idx}
                     onClick={() => openModal(service.images, service.title)}
-                    className="service-card group relative rounded-2xl overflow-hidden cursor-pointer bg-white border border-[#E9E3D8]"
+                    className="service-card group relative rounded-2xl overflow-hidden cursor-pointer bg-white border border-[#E9E3D8] flex flex-col h-full"
                   >
                     {/* Image with zoom on hover */}
-                    <div className="h-48 overflow-hidden bg-[#F8F5F0]">
+                    <div className="h-48 overflow-hidden bg-[#F8F5F0] shrink-0">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -250,23 +284,23 @@ export default function ServicesSection() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-5">
+                    <div className="p-5 flex flex-col flex-grow">
                       {/* Icon chip */}
-                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-[#F8F5F0] border border-[#E9E3D8] text-[#C8A96A] mb-3 group-hover:bg-[#C8A96A] group-hover:text-white group-hover:border-[#C8A96A] transition-all duration-300">
+                      <div className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-[#F8F5F0] border border-[#E9E3D8] text-[#C8A96A] mb-3 group-hover:bg-[#C8A96A] group-hover:text-white group-hover:border-[#C8A96A] transition-all duration-300 shrink-0">
                         {service.icon}
                       </div>
                       <h3
-                        className="text-sm font-black uppercase tracking-tight text-[#2B2B2B] mb-2 leading-snug group-hover:text-[#C8A96A] transition-colors duration-300"
+                        className="text-sm font-black uppercase tracking-tight text-[#2B2B2B] mb-2 leading-snug group-hover:text-[#C8A96A] transition-colors duration-300 shrink-0"
                         style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                       >
                         {service.title}
                       </h3>
-                      <p className="text-[#999] text-xs font-light leading-relaxed mb-4">
+                      <p className="text-[#999] text-xs font-light leading-relaxed mb-4 flex-grow">
                         {service.desc}
                       </p>
 
                       {/* Animated CTA */}
-                      <span className="service-cta inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#C8A96A]">
+                      <span className="service-cta mt-auto inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#C8A96A] shrink-0">
                         View Gallery <ChevronRight size={12} className="service-cta-arrow" />
                       </span>
                     </div>

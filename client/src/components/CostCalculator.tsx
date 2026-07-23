@@ -42,6 +42,13 @@ const COMMERCIAL_OPTIONS: { value: CommercialConfig; label: string; icon: React.
   { value: "other",      label: "Other Commercial",  icon: <LayoutGrid size={16} /> },
 ];
 
+const DEFAULT_AREAS: Record<BHK, number> = {
+  "1": 600,
+  "2": 1100,
+  "3": 1600,
+  "4+": 2400,
+};
+
 // ─────────────────────────────────────────────────────────────
 // HELPERS
 // ─────────────────────────────────────────────────────────────
@@ -309,14 +316,15 @@ export default function CostCalculator() {
   const areaNum = !validateArea(areaInput, propertyType, bhk) ? Number(areaInput.trim()) : 0;
 
   // ── Update calc when inputs change ───────────────────────
-  function updateCalc(partial: { propertyType?: PropertyType; bhk?: BHK; pkg?: Package }) {
+  function updateCalc(partial: { propertyType?: PropertyType; bhk?: BHK; pkg?: Package }, customAreaInput?: string) {
     const next = { ...snapshot, ...partial };
+    const areaVal = customAreaInput !== undefined ? customAreaInput : areaInput;
     const range = PRICE_PER_SQFT[next.pkg];
-    const err = validateArea(areaInput, next.propertyType, next.bhk);
+    const err = validateArea(areaVal, next.propertyType, next.bhk);
     const isValid = !err;
-    const a = isValid ? Number(areaInput.trim()) : 0;
+    const a = isValid ? Number(areaVal.trim()) : 0;
     
-    if (areaInput.trim() !== "" || errors.area) {
+    if (areaVal.trim() !== "" || errors.area) {
       setErrors((p) => ({ ...p, area: err }));
     }
     
@@ -452,7 +460,14 @@ export default function CostCalculator() {
                       type="button"
                       aria-pressed={propertyType === value}
                       onClick={() => {
-                        updateCalc({ propertyType: value });
+                        const isSwitchingToResidential = propertyType === "commercial" && value !== "commercial";
+                        if (isSwitchingToResidential) {
+                          const defaultArea = DEFAULT_AREAS[bhk];
+                          setAreaInput(String(defaultArea));
+                          updateCalc({ propertyType: value }, String(defaultArea));
+                        } else {
+                          updateCalc({ propertyType: value });
+                        }
                         // Reset commercial config when switching
                         if (value !== "commercial") setCommercialConfig("office");
                       }}
@@ -483,7 +498,11 @@ export default function CostCalculator() {
                         key={value}
                         type="button"
                         aria-pressed={bhk === value}
-                        onClick={() => updateCalc({ bhk: value })}
+                        onClick={() => {
+                          const defaultArea = DEFAULT_AREAS[value];
+                          setAreaInput(String(defaultArea));
+                          updateCalc({ bhk: value }, String(defaultArea));
+                        }}
                         className={`py-3 rounded-xl text-sm font-black border-2 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#C8A96A] focus-visible:outline-offset-2 flex flex-col items-center gap-1 ${
                           bhk === value
                             ? "bg-[#2B2B2B] text-white border-[#2B2B2B] shadow-lg"
@@ -551,9 +570,15 @@ export default function CostCalculator() {
                       ✓ {areaNum.toLocaleString()} sq. ft. entered
                     </p>
                   )}
-                  <p className="text-[11px] text-[#B0A898] mt-1">
-                    Typical: 1 BHK ≈ 500–700 sq. ft. · 2 BHK ≈ 700–1100 sq. ft. · 3 BHK ≈ 1100–1600 sq. ft.
-                  </p>
+                  {isResidential ? (
+                    <p className="text-[11px] text-[#B0A898] mt-1">
+                      Typical Carpet Area: {bhk === "1" ? "400–800" : bhk === "2" ? "800–1400" : bhk === "3" ? "1400–2200" : "2200–5000+"} sq. ft.
+                    </p>
+                  ) : (
+                    <p className="text-[11px] text-[#B0A898] mt-1">
+                      Typical Carpet Area: 500–5000+ sq. ft.
+                    </p>
+                  )}
                 </div>
               </div>
 

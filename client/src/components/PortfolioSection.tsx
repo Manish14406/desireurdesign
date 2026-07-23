@@ -24,10 +24,10 @@ export default function PortfolioSection() {
              style={{ fontFamily: "'Poppins', sans-serif" }}>
             Our Work
           </p>
-          <h2 className="cinema-heading mb-4">Featured<br />Portfolio</h2>
+          <h2 className="cinema-heading mb-4">Inspired by Dreams,<br />Designed for Life</h2>
           <div className="cinema-accent-line" />
-          <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-xl">
-            A curated selection of our finest interior transformations across Bengaluru.
+          <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-2xl">
+            Every beautiful home begins with a dream. Explore inspiring interiors that celebrate elegance, comfort, and creativity.
           </p>
         </div>
 
@@ -59,7 +59,6 @@ export default function PortfolioSection() {
                   >
                     {project.title}
                   </h3>
-                  <p className="text-xs text-[#999] mt-0.5">{project.location}</p>
                 </div>
                 <span className="text-xs font-bold text-[#999] uppercase tracking-widest hidden sm:block">
                   {project.year}

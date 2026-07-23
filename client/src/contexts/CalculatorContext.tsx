@@ -72,7 +72,7 @@ export const PACKAGE_DESC: Record<Package, string> = {
 function buildDefault(): CalculatorSnapshot {
   const propertyType: PropertyType = "apartment";
   const bhk: BHK = "2";
-  const area = 1000;
+  const area = 1100;
   const pkg: Package = "premium";
   const range = PRICE_PER_SQFT[pkg];
   return {

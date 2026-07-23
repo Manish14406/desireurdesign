@@ -1226,3 +1226,69 @@
 [2026-07-20T11:40:12.887Z] {"timestamp":1784547610575,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-07-20T11:40:12.887Z] {"timestamp":1784547610597,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-07-20T11:40:12.887Z] {"timestamp":1784547610696,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-22T04:21:36.863Z] {"timestamp":1784694093234,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-22T04:21:38.134Z] {"timestamp":1784694096876,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-22T04:21:39.406Z] {"timestamp":1784694098718,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-22T04:26:59.415Z] {"timestamp":1784694415296,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-22T04:26:59.415Z] {"timestamp":1784694415307,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-22T04:27:01.537Z] {"timestamp":1784694421115,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-22T04:32:09.960Z] {"timestamp":1784694673319,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-22T04:32:09.960Z] {"timestamp":1784694673322,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AppointmentBooking.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947462,"level":"DEBUG","args":["[vite]","invalidate /src/contexts/CalculatorContext.tsx: Could not Fast Refresh (\"PACKAGE_DESC\" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947463,"level":"DEBUG","args":["[vite]","hot updated: /src/contexts/CalculatorContext.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947463,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947864,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947864,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947864,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StyleQuiz.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694947864,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AppointmentBooking.tsx"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694961561,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-22T04:36:09.957Z] {"timestamp":1784694961561,"level":"DEBUG","args":["[vite]","hot updated: /src/components/CostCalculator.tsx"],"stack":null}
+[2026-07-22T04:36:56.233Z] {"timestamp":1784695014228,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-22T04:36:56.233Z] {"timestamp":1784695014241,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-22T04:36:56.233Z] {"timestamp":1784695014282,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-22T04:42:09.965Z] {"timestamp":1784695300655,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-22T04:42:09.965Z] {"timestamp":1784695300656,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-22T04:42:09.965Z] {"timestamp":1784695300997,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-22T04:42:09.965Z] {"timestamp":1784695300997,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T06:31:26.119Z] {"timestamp":1784788283396,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-23T06:31:27.576Z] {"timestamp":1784788286129,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-23T06:31:29.403Z] {"timestamp":1784788288143,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-23T07:36:17.146Z] {"timestamp":1784792175139,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-23T07:36:17.146Z] {"timestamp":1784792175150,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-23T07:36:17.146Z] {"timestamp":1784792175250,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793156972,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793156976,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793157480,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793157480,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793170901,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T07:53:23.081Z] {"timestamp":1784793170901,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AppointmentBooking.tsx"],"stack":null}
+[2026-07-23T08:13:09.524Z] {"timestamp":1784794377692,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-07-23T08:14:49.785Z] {"timestamp":1784794487781,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-23T08:14:49.785Z] {"timestamp":1784794487790,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-23T08:14:49.785Z] {"timestamp":1784794487856,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-23T08:17:25.786Z] {"timestamp":1784794645430,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:17:25.786Z] {"timestamp":1784794645430,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:17:43.120Z] {"timestamp":1784794661105,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-23T08:17:43.120Z] {"timestamp":1784794661117,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-23T08:17:43.120Z] {"timestamp":1784794661198,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-23T08:18:45.112Z] {"timestamp":1784794723512,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:18:45.112Z] {"timestamp":1784794723512,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:20:21.755Z] {"timestamp":1784794821702,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:20:21.755Z] {"timestamp":1784794821703,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:20:35.753Z] {"timestamp":1784794835695,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:20:35.753Z] {"timestamp":1784794835696,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:24:22.762Z] {"timestamp":1784795040150,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:24:22.762Z] {"timestamp":1784795040151,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:24:22.762Z] {"timestamp":1784795048408,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:24:22.762Z] {"timestamp":1784795048409,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AppointmentBooking.tsx"],"stack":null}
+[2026-07-23T08:29:55.371Z] {"timestamp":1784795383997,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:29:55.371Z] {"timestamp":1784795383997,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:32:22.764Z] {"timestamp":1784795527649,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:32:22.764Z] {"timestamp":1784795527650,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:32:28.799Z] {"timestamp":1784795546785,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-23T08:32:28.799Z] {"timestamp":1784795546817,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-23T08:32:28.799Z] {"timestamp":1784795546881,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-23T08:33:54.795Z] {"timestamp":1784795633472,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:33:54.795Z] {"timestamp":1784795633473,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-23T08:37:22.757Z] {"timestamp":1784795840426,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-23T08:37:22.757Z] {"timestamp":1784795840427,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}

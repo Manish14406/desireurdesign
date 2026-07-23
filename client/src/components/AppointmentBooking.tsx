@@ -16,6 +16,11 @@ import {
   IndianRupee,
   X,
   ArrowRight,
+  Lightbulb,
+  Compass,
+  Coins,
+  Star,
+  Smile,
 } from "lucide-react";
 import { useCalculator } from "@/contexts/CalculatorContext";
 
@@ -36,11 +41,14 @@ const TIME_SLOTS = [
 
 const SERVICES = [
   "Residential Interiors",
+  "Living Room Design",
   "Modular Kitchen",
   "Space Planning & Layout",
   "Vastu Consultation",
   "Renovation & Remodelling",
   "Full Home Interior",
+  "Temple Design",
+  "Bedroom Interior Design",
 ];
 
 const MESSAGE_MAX = 500;
@@ -678,36 +686,55 @@ export default function AppointmentBooking() {
 
               <ul className="space-y-6" role="list">
                 {[
-                  { title: "Expert Guidance", desc: "Discuss layout options and materials with our experienced designers." },
-                  { title: "Vastu Assessment", desc: "Basic alignment check based on your floor plan and compass directions." },
-                  { title: "Budget Planning", desc: "Get a clear idea of costs for different luxury packages with no hidden charges." },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#C8A96A]/20 border border-[#C8A96A]/30 flex items-center justify-center flex-shrink-0 text-[#C8A96A] font-bold text-sm" aria-hidden="true">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-white font-bold mb-1 text-base">{item.title}</h3>
-                      <p className="text-[#999] text-sm font-light leading-snug">{item.desc}</p>
-                    </div>
-                  </li>
-                ))}
+                  {
+                    icon: Lightbulb,
+                    title: "Expert Design Consultation",
+                    desc: "Discuss your lifestyle, design preferences, layout ideas, and material selections with our experienced interior designers.",
+                  },
+                  {
+                    icon: Compass,
+                    title: "Vastu & Space Assessment",
+                    desc: "Receive a professional assessment of your floor plan with practical Vastu recommendations to create a harmonious living space.",
+                  },
+                  {
+                    icon: Coins,
+                    title: "Transparent Budget Planning",
+                    desc: "Get a personalized interior cost estimate with clear package options, premium material recommendations, and no hidden charges.",
+                  },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={i} className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-[#C8A96A]/10 border border-[#C8A96A]/20 flex items-center justify-center flex-shrink-0 text-[#C8A96A]" aria-hidden="true">
+                        <Icon className="w-5 h-5 text-[#C8A96A]" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-bold mb-1 text-base">{item.title}</h3>
+                        <p className="text-[#999] text-sm font-light leading-snug">{item.desc}</p>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
 
               {/* Trust badges */}
               <div className="mt-10 pt-8 border-t border-[#332B1E] grid grid-cols-3 gap-4">
                 {[
-                  { label: "200+", sub: "Projects Done" },
-                  { label: "6+", sub: "Years Experience" },
-                  { label: "100%", sub: "Satisfaction" },
-                ].map((badge, i) => (
-                  <div key={i} className="text-center">
-                    <p className="text-2xl font-black text-[#C8A96A]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                      {badge.label}
-                    </p>
-                    <p className="text-[10px] uppercase tracking-widest text-[#666] font-bold mt-1">{badge.sub}</p>
-                  </div>
-                ))}
+                  { icon: Home, label: "200+", sub: "Homes Delivered" },
+                  { icon: Star, label: "6+", sub: "Years of Experience" },
+                  { icon: Smile, label: "99.9%", sub: "Client Satisfaction" },
+                ].map((badge, i) => {
+                  const Icon = badge.icon;
+                  return (
+                    <div key={i} className="text-center flex flex-col items-center">
+                      <Icon className="w-6 h-6 text-[#C8A96A] mb-2" strokeWidth={1.5} />
+                      <p className="text-2xl font-black text-[#C8A96A]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                        {badge.label}
+                      </p>
+                      <p className="text-[10px] uppercase tracking-widest text-[#666] font-bold mt-1 leading-snug">{badge.sub}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
