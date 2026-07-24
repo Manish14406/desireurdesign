@@ -13,6 +13,7 @@ import BlogSection from "@/components/BlogSection";
 import CostCalculator from "@/components/CostCalculator";
 import StyleQuiz from "@/components/StyleQuiz";
 import AppointmentBooking from "@/components/AppointmentBooking";
+import ProcessSection from "@/components/ProcessSection";
 
 export default function Home() {
   const { isLoading, navLogoRef } = useLoading();
@@ -196,101 +197,7 @@ export default function Home() {
 
       <GallerySection />
 
-      {/* ── DESIGN PROCESS ── */}
-      <section id="process" className="py-20 sm:py-28 md:py-40 px-4 sm:px-8 md:px-12 bg-white border-t border-[#E9E3D8]">
-        <div className="max-w-[90rem] mx-auto">
-          <div className="text-center mb-16 sm:mb-24">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-[#C8A96A] font-bold mb-3">Our Approach</p>
-            <h2 className="cinema-heading mb-4">The Premium Process</h2>
-            <div className="cinema-accent-line mx-auto mb-6" />
-            <p className="text-[#666] font-light max-w-2xl mx-auto">A seamless, transparent, and refined journey from the first meeting to the day you step into your new home.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 sm:gap-y-16">
-            {[
-              {
-                title: "Consultation", desc: "Understanding your vision, lifestyle, and Vastu preferences.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                    <path d="M8 10h8M8 13h5" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Concept Design", desc: "Initial layouts, mood boards, and aesthetic direction.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.6-1.4 4.9-3.5 6.2L15 18H9l-.5-2.8A7 7 0 0 1 12 2z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Space Planning", desc: "Optimizing flow and function for every room.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <circle cx="12" cy="12" r="10" />
-                    <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" />
-                  </svg>
-                ),
-              },
-              {
-                title: "3D Visualization", desc: "Photorealistic renders of your future home.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <rect x="2" y="4" width="20" height="14" rx="2" />
-                    <path d="M8 20h8M12 18v2" />
-                    <path d="M9 8l3 4 3-4" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Material Selection", desc: "Curating premium finishes, fabrics, and hardware.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <polygon points="12,2 15.5,8.5 22,9.3 17,14.1 18.2,21 12,17.8 5.8,21 7,14.1 2,9.3 8.5,8.5" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Execution", desc: "Precision crafting by our expert installation teams.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Quality Inspection", desc: "Rigorous checks against our luxury standards.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M12 2L4 6v6c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V6l-8-4z" />
-                    <polyline points="8,12 11,15 16,10" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Final Handover", desc: "Welcome to your beautifully finished new home.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
-                  </svg>
-                ),
-              },
-            ].map((step, i) => (
-              <div key={i} className="relative p-6 rounded-3xl bg-[#F8F5F0] border border-[#E9E3D8] hover:border-[#C8A96A]/40 transition-colors group">
-                <div className="process-icon-badge absolute -top-6 -left-4 w-12 h-12 bg-white rounded-full border-2 border-[#C8A96A] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#C8A96A] transition-all duration-300">
-                  <span className="text-[#C8A96A] group-hover:text-white transition-colors duration-300">
-                    {step.icon}
-                  </span>
-                </div>
-                <h3 className="text-sm font-black uppercase tracking-widest text-[#2B2B2B] mt-4 mb-3">{step.title}</h3>
-                <p className="text-[#666] text-sm font-light leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProcessSection />
 
       <TestimonialsSection />
       

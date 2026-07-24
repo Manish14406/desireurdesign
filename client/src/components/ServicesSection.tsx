@@ -171,8 +171,8 @@ const serviceCategories = [
         icon: <CompassIcon />,
         title: "Space Planning",
         desc: "Optimising every square foot for flow, function and timeless aesthetic balance.",
-        image: "/images/luxury_wall_panels.webp",
-        images: ["/images/luxury_wall_panels.webp", "/images/falseceiling1.webp"],
+        image: "/images/gallery/space1.jpeg",
+        images: ["/images/gallery/space1.jpeg", "/images/gallery/space2.jpeg", "/images/gallery/space3.jpeg"],
       },
       {
         icon: <SunIcon />,

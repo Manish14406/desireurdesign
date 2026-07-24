@@ -1,10 +1,41 @@
 import { MessageCircle } from "lucide-react";
 
 const highlights = [
-  { icon: "✦", label: "Vastu Expertise" },
-  { icon: "✦", label: "Premium Materials" },
-  { icon: "✦", label: "Client-First Approach" },
-  { icon: "✦", label: "Timeless Designs" },
+  {
+    label: "Vastu Expertise",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <circle cx="12" cy="12" r="10"/>
+        <polygon points="12,2 14.5,9.5 22,9.5 16,14 18.5,21.5 12,17 5.5,21.5 8,14 2,9.5 9.5,9.5"/>
+      </svg>
+    ),
+  },
+  {
+    label: "Premium Materials",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/>
+        <polygon points="12,7 17,10.5 17,13.5 12,17 7,13.5 7,10.5"/>
+      </svg>
+    ),
+  },
+  {
+    label: "Client-First Approach",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    ),
+  },
+  {
+    label: "Timeless Designs",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+        <path d="M12 6v6l4 2"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function FounderSection() {
@@ -74,9 +105,11 @@ export default function FounderSection() {
           {highlights.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-[#F8F5F0] border border-[#E9E3D8]"
+              className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-[#F8F5F0] border border-[#E9E3D8] hover:border-[#C8A96A]/40 hover:shadow-[0_6px_20px_rgba(200,169,106,0.10)] transition-all duration-300 group"
             >
-              <span className="text-[#C8A96A] text-lg">{item.icon}</span>
+              <div className="w-10 h-10 rounded-full bg-white border border-[#E9E3D8] flex items-center justify-center text-[#C8A96A] shadow-sm group-hover:bg-[#C8A96A] group-hover:text-white group-hover:border-[#C8A96A] transition-all duration-300">
+                {item.icon}
+              </div>
               <span
                 className="text-[#2B2B2B] text-[10px] font-bold uppercase tracking-widest text-center"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
@@ -85,6 +118,7 @@ export default function FounderSection() {
               </span>
             </div>
           ))}
+
         </div>
 
         {/* CTA */}

@@ -23,8 +23,8 @@ export default function PortfolioSection() {
 
           <h2 className="cinema-heading mb-4">Inspired by Dreams,<br />Designed for Life</h2>
           <div className="cinema-accent-line" />
-          <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-2xl">
-            Every beautiful home begins with a dream. Explore inspiring interiors that celebrate elegance, comfort, and creativity.
+          <p className="text-[#666] mt-6 font-light text-sm sm:text-base max-w-xl">
+            Real spaces. Real families. Timeless design.
           </p>
         </div>
 
