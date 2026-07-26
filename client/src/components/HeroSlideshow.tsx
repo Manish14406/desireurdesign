@@ -35,10 +35,9 @@ const slides = [
 ];
 
 const badges = [
-  "Residential Interiors",
-  "Vastu Consultation",
-  "Renovation",
-  "Turnkey Solutions",
+  "Interior Services",
+  "Architect support",
+  "Vastu Consultant",
 ];
 
 function smoothScrollTo(id: string) {

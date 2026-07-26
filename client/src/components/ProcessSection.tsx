@@ -23,7 +23,18 @@ const STEPS: Step[] = [
     items: ["Site Visit", "Requirement Analysis", "Budget Discussion", "Vastu Assessment"],
   },
   {
-    num: "02", title: "Concept Design", time: "5–7 Days",
+    num: "02", title: "Vastu Consultation", time: "2–3 Days",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" />
+      </svg>
+    ),
+    label: "You'll Receive",
+    items: ["Plot Analysis", "Home Vastu Consultation", "Office Vastu Consultation", "Commercial Vastu Guidance", "Practical Remedies (without demolition)"],
+  },
+  {
+    num: "03", title: "Concept Design", time: "5–7 Days",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.6-1.4 4.9-3.5 6.2L15 18H9l-.5-2.8A7 7 0 0 1 12 2z"/>
@@ -33,7 +44,7 @@ const STEPS: Step[] = [
     items: ["Space Planning", "Furniture Layout", "Mood Board", "Color Palette"],
   },
   {
-    num: "03", title: "3D Visualization", time: "7–10 Days",
+    num: "04", title: "3D Visualization", time: "7–10 Days",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <rect x="2" y="4" width="20" height="14" rx="2"/>
@@ -45,7 +56,7 @@ const STEPS: Step[] = [
     items: ["2–3 Photorealistic Views", "Room-wise Walkthrough", "One Revision Round", "Furniture Placement"],
   },
   {
-    num: "04", title: "Material Selection", time: "3–5 Days",
+    num: "05", title: "Material Selection", time: "3–5 Days",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <polygon points="12,2 15.5,8.5 22,9.3 17,14.1 18.2,21 12,17.8 5.8,21 7,14.1 2,9.3 8.5,8.5"/>
@@ -55,7 +66,7 @@ const STEPS: Step[] = [
     items: ["Material Selection Guidance", "Finish Selection", "Lighting Suggestions", "Cost Optimization"],
   },
   {
-    num: "05", title: "Execution", time: "45–90 Days",
+    num: "06", title: "Execution", time: "45–90 Days",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -65,7 +76,7 @@ const STEPS: Step[] = [
     items: ["Dedicated Project Manager", "Premium Branded Materials", "Weekly Progress Updates", "Strict Quality Inspections", "Timely Project Delivery"],
   },
   {
-    num: "06", title: "Final Handover & Support", time: "1 Day",
+    num: "07", title: "Final Handover & Support", time: "1 Day",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <path d="M12 2L4 6v6c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V6l-8-4z"/>
@@ -144,7 +155,7 @@ export default function ProcessSection() {
           <h2 className="cinema-heading mb-4">Our Design Process</h2>
           <div className="cinema-accent-line mx-auto mb-6" />
           <p className="text-[#666] font-light max-w-2xl mx-auto text-sm sm:text-base leading-relaxed italic">
-            "I believe every home should reflect the personality and lifestyle of the family who lives in it."
+            "Every home deserves thoughtful design, practical functionality, and timeless elegance. We create spaces that truly reflect your lifestyle."
           </p>
         </div>
 

@@ -46,6 +46,9 @@ export default function FounderSection() {
       aria-label="Meet the Founder"
     >
       <div className="max-w-[50rem] mx-auto text-center">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 rounded-full overflow-hidden border-[3px] border-[#C8A96A] shadow-[0_8px_24px_rgba(200,169,106,0.2)]">
+          <img src="/gallery/designer.jpeg" alt="Pallavi - Principal Designer" className="w-full h-full object-cover" />
+        </div>
         <p
           className="text-[10px] uppercase tracking-[0.4em] text-[#C8A96A] font-bold mb-3"
           style={{ fontFamily: "'Poppins', sans-serif" }}

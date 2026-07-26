@@ -6,6 +6,14 @@ export const galleryImages: string[] = [
   // ── Newly added photos ─────────────────────────────────────
   "/gallery/WhatsApp Image 2026-07-23 at 2.35.44 PM.jpeg",
   "/gallery/WhatsApp Image 2026-07-23 at 2.35.45 PM.jpeg",
+  "/gallery/fy1.png",
+  "/gallery/fy2.png",
+  "/gallery/fy3.png",
+  "/gallery/fy4.png",
+  "/gallery/wallart1.jpeg",
+  "/gallery/wallart2.jpeg",
+  "/gallery/wallart3.jpeg",
+  "/gallery/wallart4.jpeg",
 
   // Residential Interior Design
   "/gallery/res1.jpeg",
@@ -35,11 +43,10 @@ export const galleryImages: string[] = [
   // Modular Kitchen
   "/images/modular_kitchen_realistic.png",
   "/images/luxury_kitchen.webp",
-  "/images/island_kitchen.webp",
-  "/images/parallel_kitchen.webp",
+
 
   // Wardrobes & Storage
-  "/images/wardrobes2.webp",
+
   "/images/wardrobes1.webp",
   "/images/wardrobesnew4.webp",
   "/images/luxury_wardrobe.webp",
@@ -61,9 +68,6 @@ export const galleryImages: string[] = [
   "/gallery/false.png",
 
   // Renovation & Makeovers
-  "/images/hero_luxury_kitchen.webp",
-  "/images/open_kitchen.webp",
-  "/images/l_shaped_kitchen.webp",
 
   // WhatsApp portfolio photos — one unique shot per timestamp (no near-duplicates, no blank photos)
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.00.06 PM.jpeg",
@@ -84,7 +88,7 @@ export const galleryImages: string[] = [
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.21 PM.jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.25 PM (1).jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.25 PM (2).jpeg",
-  "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.26 PM (1).jpeg",
+
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.27 PM (1).jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.27 PM.jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.01.28 PM (1).jpeg",
@@ -104,12 +108,32 @@ export const galleryImages: string[] = [
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.26 PM.jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.27 PM (2).jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.28 PM (1).jpeg",
-  "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.28 PM (2).jpeg",
-  "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.28 PM.jpeg",
+
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.29 PM (2).jpeg",
-  "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.29 PM.jpeg",
+
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.30 PM (1).jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.30 PM.jpeg",
   "/images/gallery/WhatsApp Image 2026-07-14 at 12.02.31 PM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.20.13 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.34 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.34 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.34 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.35 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.35 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.35 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.36 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.36 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.37 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.39 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.40 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.40 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.40 AM (3).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.40 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.41 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.41 AM (3).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.41 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.42 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.42 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.42 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-26 at 11.39.43 AM (1).jpeg",
 ];
-

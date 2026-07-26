@@ -96,6 +96,21 @@ const TempleIcon = () => (
   </svg>
 );
 
+const DoorIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+    <rect x="5" y="3" width="14" height="18" rx="2" />
+    <circle cx="15" cy="12" r="1" />
+  </svg>
+);
+
+const PictureIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <circle cx="8.5" cy="8.5" r="1.5" />
+    <path d="M21 15l-5-5L5 21" />
+  </svg>
+);
+
 /* ── Category groupings ── */
 const serviceCategories = [
   {
@@ -136,6 +151,13 @@ const serviceCategories = [
         image: "/gallery/bed1.jpeg",
         images: ["/gallery/bed1.jpeg", "/gallery/bed2.jpeg", "/gallery/bed3.jpeg", "/gallery/bed4.jpeg", "/gallery/bed5.jpeg"],
       },
+      {
+        icon: <DoorIcon />,
+        title: "Foyer Area",
+        desc: "Make a striking first impression with beautifully designed entryway spaces.",
+        image: "/gallery/fy1.png",
+        images: ["/gallery/fy1.png", "/gallery/fy2.png", "/gallery/fy3.png", "/gallery/fy4.png"],
+      },
     ],
   },
   {
@@ -162,6 +184,13 @@ const serviceCategories = [
         image: "/gallery/temple1.jpeg",
         images: ["/gallery/temple1.jpeg", "/gallery/temple2.jpeg", "/gallery/temple3.jpeg", "/gallery/temple4.jpeg"],
       },
+      {
+        icon: <PictureIcon />,
+        title: "Wall Art",
+        desc: "Curated artistic features and statement pieces to elevate your blank walls.",
+        image: "/gallery/wallart1.jpeg",
+        images: ["/gallery/wallart1.jpeg", "/gallery/wallart2.jpeg", "/gallery/wallart3.jpeg", "/gallery/wallart4.jpeg"],
+      },
     ],
   },
   {
@@ -178,8 +207,17 @@ const serviceCategories = [
         icon: <SunIcon />,
         title: "Vastu Consultation",
         desc: "Ancient Vastu Shastra principles blended with modern design for harmony and prosperity.",
-        image: "/images/blog_vastu.png",
-        images: ["/images/blog_vastu.png", "/images/complete_home_interior.webp"],
+        image: "/gallery/vastu1.png",
+        images: [
+          "/gallery/vastu1.png",
+          "/gallery/vastu2.png",
+          "/gallery/vastu3.png",
+          "/gallery/vastu4.png",
+          "/gallery/vastu5.png",
+          "/gallery/vastu6.png",
+          "/gallery/vastu7.png",
+          "/gallery/vastu8.png"
+        ],
       },
     ],
   },
@@ -192,13 +230,6 @@ const serviceCategories = [
         desc: "Stunning ceiling designs with integrated ambient, task and accent lighting systems.",
         image: "/images/falseceiling1.webp",
         images: ["/images/falseceiling1.webp", "/images/falseceiling2.webp", "/images/falseceiling3.webp", "/gallery/false.png"],
-      },
-      {
-        icon: <HammerIcon />,
-        title: "Renovation & Makeovers",
-        desc: "Complete home makeovers that breathe new life and luxury into existing spaces.",
-        image: "/images/hero_luxury_kitchen.webp",
-        images: ["/images/hero_luxury_kitchen.webp", "/images/open_kitchen.webp", "/images/l_shaped_kitchen.webp"],
       },
     ],
   },
