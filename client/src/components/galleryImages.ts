@@ -52,8 +52,8 @@ export const galleryImages: string[] = [
   "/images/luxury_wardrobe.webp",
 
   // TV Unit
-  "/images/TVunit.webp",
   "/images/TVunits1.webp",
+  "/images/TVunit.webp",
   "/images/Tvunits2.webp",
 
   // Crockery Unit
@@ -136,4 +136,10 @@ export const galleryImages: string[] = [
   "/gallery/WhatsApp Image 2026-07-26 at 11.39.42 AM (2).jpeg",
   "/gallery/WhatsApp Image 2026-07-26 at 11.39.42 AM.jpeg",
   "/gallery/WhatsApp Image 2026-07-26 at 11.39.43 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.10 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.10 AM (1).jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.10 AM (2).jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.10 AM (3).jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.11 AM.jpeg",
+  "/gallery/WhatsApp Image 2026-07-29 at 11.15.11 AM (2).jpeg",
 ];

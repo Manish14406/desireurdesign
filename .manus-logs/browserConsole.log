@@ -1457,3 +1457,21 @@
 [2026-07-26T06:25:57.461Z] {"timestamp":1785047154842,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-07-26T06:25:57.461Z] {"timestamp":1785047154846,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-07-26T06:25:57.461Z] {"timestamp":1785047154917,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-29T05:52:38.296Z] {"timestamp":1785304354880,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-29T05:52:39.908Z] {"timestamp":1785304358319,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-29T05:52:40.977Z] {"timestamp":1785304360538,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427360,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427491,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427491,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427617,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T05:53:48.891Z] {"timestamp":1785304427617,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-07-29T05:54:03.022Z] {"timestamp":1785304441004,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-29T05:54:03.023Z] {"timestamp":1785304441015,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-29T05:54:03.023Z] {"timestamp":1785304441058,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-07-29T05:55:07.747Z] {"timestamp":1785304507107,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T05:55:07.747Z] {"timestamp":1785304507108,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-29T06:01:32.559Z] {"timestamp":1785304878880,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T06:01:32.559Z] {"timestamp":1785304878881,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ServicesSection.tsx"],"stack":null}
+[2026-07-29T06:03:07.010Z] {"timestamp":1785304985342,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-07-29T06:03:07.010Z] {"timestamp":1785304985342,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}

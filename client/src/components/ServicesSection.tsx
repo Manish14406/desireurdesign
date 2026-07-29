@@ -135,7 +135,7 @@ const serviceCategories = [
         title: "Modular Kitchen",
         desc: "Smart, beautiful kitchens with premium finishes, branded hardware & smart storage.",
         image: "/images/modular_kitchen_realistic.png",
-        images: ["/images/modular_kitchen_realistic.png", "/images/luxury_kitchen.webp", "/images/island_kitchen.webp", "/images/parallel_kitchen.webp"],
+        images: ["/images/modular_kitchen_realistic.png", "/images/luxury_kitchen.webp", "/images/island_kitchen.webp", "/gallery/modularkitchen1.jpeg"],
       },
       {
         icon: <WardrobeIcon />,
@@ -167,8 +167,8 @@ const serviceCategories = [
         icon: <TvIcon />,
         title: "TV Unit",
         desc: "Designer TV panels and entertainment units that anchor your living space beautifully.",
-        image: "/images/TVunit.webp",
-        images: ["/images/TVunit.webp", "/images/TVunits1.webp", "/images/Tvunits2.webp"],
+        image: "/images/TVunits1.webp",
+        images: ["/images/TVunits1.webp", "/images/TVunit.webp", "/images/Tvunits2.webp"],
       },
       {
         icon: <BookshelfIcon />,
