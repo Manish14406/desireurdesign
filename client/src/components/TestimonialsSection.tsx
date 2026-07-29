@@ -2,35 +2,34 @@ import { Star, ExternalLink } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Venkatesh",
-    location: "Whitefield, Bengaluru",
-    project: "3BHK Full Home Interior",
+    name: "Vachan Peter",
+    location: "5 months ago",
+    project: "4BHK Interior Design",
     rating: 5,
-    text: "Design Ur Desire transformed our 3BHK into something out of a magazine. The attention to detail in our living room and false ceiling design is extraordinary. They delivered on time and within budget — absolutely no surprises. Pallavi understood our family's vision perfectly.",
-    image: "/images/luxury_living_room.webp",
-    initials: "PV",
+    text: "We recently got our 4BHK interior designed by Design Ur Desire, and the entire experience has been absolutely wonderful! From concept to execution, every detail was thoughtfully planned and beautifully implemented. The design perfectly balances elegance and functionality, making each room feel spacious, warm, and luxurious. The color palettes, lighting, furniture selection, and customized elements all come together seamlessly to create a truly stunning home. What impressed us the most was that the entire interior project was completed within the promised timeline without compromising on quality. The team maintained excellent coordination and ensured everything was delivered as committed. A very special thanks to Ashish and Pallavi for their dedication, creativity, and constant support throughout the project. Their professionalism, patience, and eye for detail made the entire process smooth and stress-free. They truly understood our vision and transformed it into something even better than we imagined. Highly recommend Design Ur Desire to anyone looking to create a beautiful and sophisticated living space!",
+    image: "/gallery/client.png",
+    initials: "VP",
     avatarBg: "#C8A96A",
   },
   {
-    name: "Arjun & Deepa Shetty",
-    location: "Jayanagar, Bengaluru",
-    project: "Complete Home + Modular Kitchen",
+    name: "Amitabh Sinha",
+    location: "5 months ago",
+    project: "2 BHK Interior",
     rating: 5,
-    text: "We chose Design Ur Desire for our complete home interior and it was the best decision we ever made. The modular kitchen is stunning, the bedroom feels like a boutique hotel, and the team's professionalism was top-notch throughout. The Vastu consultation was an added bonus.",
-    image: "/images/Modular_kitchen1.webp",
+    text: "A house becomes special when it starts feeling like home — and that’s exactly what Design Ur Desire did for us. Our 2 BHK was just a simple flat, but today it feels warm, premium, and thoughtfully designed in every corner. Ashish and Pallavi didn’t just focus on looks — they truly understood our needs, respected Vastu, and even created a beautiful pooja space we never thought was possible. The colors, finishes, and detailing reflect careful planning and genuine dedication. We were working with a tight budget, but they completely understood our situation and delivered beyond expectations. At no point did we feel like we were compromising on quality or design. What sets them apart is that they don’t just run a business — they genuinely serve with heart and integrity. Grateful for the beautiful transformation and highly recommend them to anyone building their dream home.",
+    image: "/gallery/client2.png",
     initials: "AS",
     avatarBg: "#A8874A",
   },
   {
-    name: "Suresh Ramachandran",
-    location: "Koramangala, Bengaluru",
-    project: "Wardrobes & Wall Panels",
+    name: "Binod kumar",
+    location: "5 months ago",
+    project: "3BHK Interiors",
     rating: 5,
-    text: "Outstanding craftsmanship and design sensibility. Our wall panels and wardrobes are exactly as we envisioned — and better. The 3-year warranty gives us complete confidence. Highly recommend Design Ur Desire for anyone looking for luxury interior solutions in Bengaluru.",
-    image: "/images/luxury_wall_panels.webp",
-    initials: "SR",
+    text: "We had a fantastic experience with Design Ur Desire for our 3BHK interiors. Ashish and Pallavi transformed our simple flat into a premium, luxurious home with smart space utilization and perfect Vastu compliance. The pooja room design, color combinations, and overall finish were thoughtfully executed. Highly professional, creative, and reliable — strongly recommended!",
+    initials: "BK",
     avatarBg: "#2B2B2B",
-  },
+  }
 ];
 
 export default function TestimonialsSection() {
@@ -69,14 +68,16 @@ export default function TestimonialsSection() {
               className="group rounded-3xl border border-[#E9E3D8] bg-[#F8F5F0] hover:border-[#C8A96A]/30 hover:shadow-[0_12px_40px_rgba(200,169,106,0.12)] transition-all duration-500 overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.05)]"
             >
               {/* Project image thumbnail */}
-              <div className="h-44 overflow-hidden">
-                <img
-                  src={t.image}
-                  alt={t.project}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                />
-              </div>
+              {t.image && (
+                <div className="h-64 bg-[#F8F5F0] overflow-hidden flex items-center justify-center">
+                  <img
+                    src={t.image}
+                    alt={t.project}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                </div>
+              )}
 
               <div className="p-6 sm:p-8">
                 {/* Stars */}
