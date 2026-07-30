@@ -1516,3 +1516,6 @@
 [2026-07-29T10:36:19.316Z] {"timestamp":1785321378480,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
 [2026-07-29T10:37:21.316Z] {"timestamp":1785321440817,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
 [2026-07-29T10:37:21.316Z] {"timestamp":1785321440817,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-07-30T04:53:25.987Z] {"timestamp":1785387196621,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-07-30T04:53:25.987Z] {"timestamp":1785387196643,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-07-30T04:53:36.633Z] {"timestamp":1785387214677,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
